@@ -1,6 +1,6 @@
 {
     "Equipment/Stratagem Swap": "r",
-    "Select": "Space",
+    "Select": "{Space}",
     "Down": "s",
     "Right": "d",
     "Ready": "b"
