@@ -1,0 +1,19 @@
+{
+    "Build_Name": "Build 1",
+    "Loadout": {
+        "Weapons": {
+            "Primary": "M4A1",
+            "Secondary": "M1911",
+            "Throwable": "Frag Grenade"
+        },
+        "Stratagems": {
+            "Stratagem1": "Eagle 500kg Bomb",
+            "Stratagem2": "Orbital Gatling Barrage",
+            "Stratagem3": "Orbital EMS Strike",
+            "Stratagem4": "Orbital Gas Strike"
+        },
+        "Boosts": {
+            "Boost1": "Hellpod Space Optimization"
+        }
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "Primary": [
+        ["AR-23 Liberator", "BR-14 Adjudicator"],
+        ["R-2124 Constitution", "R-63 Diligence"],
+        ["SMG-37 Defender"],
+        ["SG-8 Punisher"],
+        ["CB-9 Exploding Crossbow", "R-36 Eruptor"]
+    ],
+    "Secondary": [
+        ["P-2 Peacemaker", "P-19 Redeemer"],
+        ["GP-31 Grenade Pistol"]
+    ],
+    "Throwable": [
+        ["G-6 Frag", "G-12 High Explosive"],
+        ["G-4 Gas", "G-123 Thermite"]
+    ],
+    "Stratagems": [
+        ["Eagle 500kg Bomb", "Orbital Gatling Barrage", "Orbital EMS Strike", "Orbital Gas Strike"]
+    ],
+    "Boosts": [
+        ["Hellpod Space Optimization"]
+    ]
+}
