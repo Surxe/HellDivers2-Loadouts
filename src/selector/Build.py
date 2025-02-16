@@ -1,12 +1,22 @@
 import json
+import os
 
 class Build():
     def __init__(self, build_path):
         self.build_path = build_path
         self.keybinds = []
         self.gear_options = self.read_gear_options()
-        self.build_name, self.build_array = self.read_build()
+        build_name, self.build_array = self.read_build()
+        self.build_name = self.clean_build_name(build_name)
         self.process_keybinds()
+        self.cache_dir = "src/selector/cache"
+        self.cache_path = f"{self.cache_dir}/{self.build_name}.txt"
+
+    def clean_build_name(self, build_name):
+        # Remove special characters from build name
+        build_name = build_name.replace(" ", "_")
+        build_name = ''.join(e for e in build_name if e.isalnum() or e == "_")
+        return build_name
 
     def read_gear_options(self):
         # Read json file with gear options
@@ -72,3 +82,10 @@ class Build():
             add_keybinds(*find_index(boost_options_array, boost_name))
 
         self.add_keybind("Select")
+
+    def write_cache(self, keybind_config):
+        os.makedirs(self.cache_dir, exist_ok=True)
+        mapped_keybinds = [keybind_config[keybind] for keybind in self.keybinds]
+        mapped_keybinds_str = " ".join(mapped_keybinds)
+        with open(self.cache_path, "w", encoding='utf-8') as file:
+            file.write(mapped_keybinds_str)
