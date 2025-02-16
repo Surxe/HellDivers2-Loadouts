@@ -24,9 +24,6 @@ class Build():
         
         return build_name, loadout
     
-    def get_build_name(self):
-        return self.build_array["Build_Name"]
-    
     def __str__(self):
         # Dict to string with indent
         string = json.dumps(self.build_array, indent=4)
@@ -75,9 +72,3 @@ class Build():
             add_keybinds(*find_index(boost_options_array, boost_name))
 
         self.add_keybind("Select")
-
-                        
-            
-        
-
-    #def read_build_file(self):
