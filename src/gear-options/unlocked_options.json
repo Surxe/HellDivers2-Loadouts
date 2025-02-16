@@ -18,6 +18,6 @@
         ["Eagle 500kg Bomb", "Orbital Gatling Barrage", "Orbital EMS Strike", "Orbital Gas Strike"]
     ],
     "Boosts": [
-        ["Hellpod Space Optimization"]
+        ["No Booster", "Hellpod Space Optimization"]
     ]
 }

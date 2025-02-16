@@ -2,9 +2,9 @@
     "Build_Name": "Build 1",
     "Loadout": {
         "Weapons": {
-            "Primary": "M4A1",
-            "Secondary": "M1911",
-            "Throwable": "Frag Grenade"
+            "Primary": "AR-23 Liberator",
+            "Secondary": "GP-31 Grenade Pistol",
+            "Throwable": "G-123 Thermite"
         },
         "Stratagems": {
             "Stratagem1": "Eagle 500kg Bomb",
