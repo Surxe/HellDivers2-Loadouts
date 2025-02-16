@@ -11,7 +11,6 @@ build_name = sys.argv[1] if len(sys.argv) > 1 else "build1"
 build_path = f"F:/Repositories/HellDivers2-Loadouts/src/builds/{build_name}.json"
 
 build = Build(build_path)
-build.read_build_file()
 
 build.print_keybinds()
 
