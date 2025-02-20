@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loadout App</title>
+</head>
+<body>
+    <h1>Loadout App</h1>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('create_loadout') }}">Create Loadout</a></li>
+            <li><a href="{{ url_for('edit_loadout') }}">Edit Loadout</a></li>
+        </ul>
+    </nav>
+    
+    <h2>Current Loadouts:</h2>
+    <ul>
+        {% for loadout in loadouts %}
+            <li>{{ loadout }}</li>
+        {% else %}
+            <li>No loadouts yet!</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
