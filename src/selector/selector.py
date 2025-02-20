@@ -8,7 +8,7 @@ sys.path.append(parent_dir)
 import json
 
 # Import local libraries
-from src.selector.build import Build
+from src.Build import Build
 
 # Args are received to sys.argv
 build_name = sys.argv[1] if len(sys.argv) > 1 else "build1"
