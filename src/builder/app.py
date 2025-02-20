@@ -20,7 +20,7 @@ loadouts = []
 
 @app.route('/')
 def home():
-    return render_template('index.html')
+    return render_template('index.html', loadouts=loadouts)
 
 @app.route('/create_loadout', methods=['GET', 'POST'])
 def create_loadout():
