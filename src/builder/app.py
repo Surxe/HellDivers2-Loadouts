@@ -76,7 +76,7 @@ def create_loadout():
             "loadouts": get_loadouts()  # Send updated list to frontend
         })
     
-    return jsonify({"message": "Failed to create loadout."})
+    return jsonify({"error": "Failed to create loadout."})
 
 @app.route('/get_loadouts', methods=['GET'])
 def get_loadouts_api():
