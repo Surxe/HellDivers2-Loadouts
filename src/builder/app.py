@@ -70,14 +70,13 @@ def create_loadout():
     # Create and write the .json file
     with open(file_path, 'w') as file:
         json.dump(loadout_data, file, indent=4)
-
-        return jsonify({"message": "Loadout created successfully!", "path": file_path})
     
-    return jsonify({
-        "message": "Loadout created successfully!",
-        "path": file_path,
-        "loadouts": get_loadouts()  # Send updated list to frontend
-    })
+        return jsonify({
+            "path": file_path,
+            "loadouts": get_loadouts()  # Send updated list to frontend
+        })
+    
+    return jsonify({"message": "Failed to create loadout."})
 
     
 
