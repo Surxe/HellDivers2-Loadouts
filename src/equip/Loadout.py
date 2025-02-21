@@ -1,22 +1,22 @@
 import json
 import os
 
-class Build():
-    def __init__(self, build_path):
-        self.build_path = build_path
+class Loadout():
+    def __init__(self, loadout_path):
+        self.loadout_path = loadout_path
         self.keybinds = []
         self.gear_options = self.read_gear_options()
-        build_name, self.build_array = self.read_build()
-        self.build_name = self.clean_build_name(build_name)
+        loadout_name, self.loadout_array = self.read_loadout()
+        self.loadout_name = self.clean_loadout_name(loadout_name)
         self.process_keybinds()
-        self.cache_dir = "src/selector/cache"
-        self.cache_path = f"{self.cache_dir}/{self.build_name}.txt"
+        self.cache_dir = "src/equip/cache"
+        self.cache_path = f"{self.cache_dir}/{self.loadout_name}.txt"
 
-    def clean_build_name(self, build_name):
-        # Remove special characters from build name
-        build_name = build_name.replace(" ", "_")
-        build_name = ''.join(e for e in build_name if e.isalnum() or e == "_")
-        return build_name
+    def clean_loadout_name(self, loadout_name):
+        # Remove special characters from loadout name
+        loadout_name = loadout_name.replace(" ", "_")
+        loadout_name = ''.join(e for e in loadout_name if e.isalnum() or e == "_")
+        return loadout_name
 
     def read_gear_options(self):
         # Read json file with gear options
@@ -25,18 +25,18 @@ class Build():
         
         return gear_options
     
-    def read_build(self):
-        # Read json file with build
-        with open(self.build_path, "r", encoding='utf-8') as file:
-            build_array = json.load(file)
-            build_name = build_array["Build_Name"]
-            loadout = build_array["Loadout"]
+    def read_loadout(self):
+        # Read json file with loadout
+        with open(self.loadout_path, "r", encoding='utf-8') as file:
+            loadout_array = json.load(file)
+            loadout_name = loadout_array["Loadout_Name"]
+            loadout = loadout_array["Loadout"]
         
-        return build_name, loadout
+        return loadout_name, loadout
     
     def __str__(self):
         # Dict to string with indent
-        string = json.dumps(self.build_array, indent=4)
+        string = json.dumps(self.loadout_array, indent=4)
         return string
 
     def print_keybinds(self):
@@ -66,18 +66,18 @@ class Build():
             self.add_keybind("Select")
 
         # Iterate stratagems
-        for _, stratagem_name in self.build_array["Stratagems"].items():
+        for _, stratagem_name in self.loadout_array["Stratagems"].items():
             print(stratagem_name)
             stratagem_options_array = self.gear_options["Stratagems"]
             add_keybinds(*find_index(stratagem_options_array, stratagem_name))
 
         # Iterate weapons
-        for weapon_type, weapon_name in self.build_array["Weapons"].items():
+        for weapon_type, weapon_name in self.loadout_array["Weapons"].items():
             weapon_options_array = self.gear_options[weapon_type]
             add_keybinds(*find_index(weapon_options_array, weapon_name))
 
         # Iterate boosts
-        for _, boost_name in self.build_array["Boosts"].items():
+        for _, boost_name in self.loadout_array["Boosts"].items():
             boost_options_array = self.gear_options["Boosts"]
             add_keybinds(*find_index(boost_options_array, boost_name))
 

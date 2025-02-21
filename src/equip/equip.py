@@ -8,15 +8,15 @@ sys.path.append(parent_dir)
 import json
 
 # Import local libraries
-from src.selector.build import Build
+from src.equip.Loadout import Loadout
 
 # Args are received to sys.argv
-build_name = sys.argv[1] if len(sys.argv) > 1 else "build1"
-build_path = f"src/builds/{build_name}.json"
-build = Build(build_path)
+loadout_name = sys.argv[1] if len(sys.argv) > 1 else "loadout1"
+loadout_path = f"src/loadouts/{loadout_name}.json"
+loadout = Loadout(loadout_path)
 
-keybind_config_path = f"src/selector/keybind_config.json"
+keybind_config_path = f"src/equip/keybind_config.json"
 with open(keybind_config_path, "r", encoding='utf-8') as file:
     keybind_config = json.load(file)
 
-build.write_cache(keybind_config)
+loadout.write_cache(keybind_config)
