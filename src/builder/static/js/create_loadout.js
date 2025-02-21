@@ -7,8 +7,7 @@ async function create_loadout() {
 
         const data = await response.json();
         if (response.ok) {
-            update_loadouts_list(data.loadouts); // Update the UI dynamically
-            rename_loadout(data.loadout_name); // Rename the current loadout
+            rename_loadout(data.loadout_name, true); // Rename the current loadout
         } else {
             alert("Error: " + data.error);
         }

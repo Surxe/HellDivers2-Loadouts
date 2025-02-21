@@ -84,6 +84,7 @@ def rename_loadout():
     data = request.get_json()
     old_name = data['old_name']
     new_name = data['new_name']
+    is_brand_new = data['is_brand_new']
     old_path = os.path.join(loadouts_dir, f"{old_name}.json")
     new_path = os.path.join(loadouts_dir, f"{new_name}.json")
 
@@ -91,14 +92,46 @@ def rename_loadout():
     if not os.path.exists(loadouts_dir):
         os.makedirs(loadouts_dir)
 
-    # Rename the file
-    os.rename(old_path, new_path)
+    file_renamed = not (old_name == new_name)
+    file_exists = os.path.exists(new_path)
+    conditions_to_decision = {
+       #(is_brand_new, file_renamed, file_exists): (should_rename, response_type)
+        (True, True, True): (False, "retry"), # if its brand new and the file name was changed and it already exists
+        (True, True, False): (True, "create"), # if its brand new and the file name was changed and it does not exist
+        (True, False, True): (False, "create"), # if its brand new and the file name was not changed then it already exists
+        (True, False, False): (False, "create"), # same as above
+        (False, True, True): (False, "retry"), # if its not brand new and the file name was changed and it already exists
+        (False, True, False): (True, "rename"), # if its not brand new and the file name was changed and it does not exist
+        (False, False, True): (False, "nothing"), # if its not brand new and the file name was not changed then it already exists
+        (False, False, False): (False, "nothing") # same as above
+    }
+    decision = conditions_to_decision[(is_brand_new, file_renamed, file_exists)]
+    rename, response_type = decision
 
-    return jsonify({
-        "old_name": old_name,
-        "new_name": new_name,
-        "loadouts": get_loadouts()  # Send updated list to frontend
-    })
+    if rename:
+        os.rename(old_path, new_path)
+
+    response_type_to_response = {
+       #response_type: response
+        "retry": {
+            "message": "Loadout \"" + new_name + "\" already exists.",
+            "retry": True
+        },
+        "create": {
+            "message": "Loadout \"" + new_name + "\" created.",
+            "loadouts": get_loadouts()
+        },
+        "rename": {
+            "message": "Loadout \"" + old_name + "\" renamed to \"" + new_name + "\".",
+            "loadouts": get_loadouts()
+        },
+        "nothing": {
+            "message": "Loadout name unchanged."
+        }
+    }
+    
+    response = response_type_to_response[response_type]
+    return jsonify(response)
 
 @app.route('/delete_loadout', methods=['POST'])
 
