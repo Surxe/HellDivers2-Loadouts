@@ -1,23 +1,33 @@
-function create_loadout() {
-    // Show loading message
-    document.getElementById("loading_message").style.display = "block";
+async function create_loadout() {
+    const loadoutName = prompt("Enter loadout name:"); // Ask for a name
+    if (!loadoutName) return;
 
-    // Send a POST request to the Flask route
-    fetch('/create_loadout', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({})  // Send any data if needed (empty body in this case)
-    })
-    .then(response => response.json())
-    .then(data => {
-        console.log(data.message);
-        document.getElementById("loading_message").style.display = "none";
-        alert(data.message);  // You can alert or update the UI as needed
-    })
-    .catch(error => {
+    try {
+        const response = await fetch("/create_loadout", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ name: loadoutName })
+        });
+
+        const data = await response.json();
+        if (response.ok) {
+            alert(data.message);
+            update_loadouts_list(data.loadouts); // Update the UI dynamically
+        } else {
+            alert("Error: " + data.error);
+        }
+    } catch (error) {
         console.error("Error:", error);
-        document.getElementById("loading_message").style.display = "none";
+    }
+}
+
+function update_loadouts_list(loadouts) {
+    const loadoutsList = document.getElementById("loadouts-list");
+    loadoutsList.innerHTML = "";  // Clear current list
+
+    loadouts.forEach(loadout => {
+        const listItem = document.createElement("li");
+        listItem.textContent = loadout;
+        loadoutsList.appendChild(listItem);
     });
 }
