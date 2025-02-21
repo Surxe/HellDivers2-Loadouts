@@ -1,8 +1,6 @@
 # HellDivers2-Loadout
 Build and select your favorite loadouts for Hell Divers 2
 
-**DEPRECATED BEFORE COMPLETION - AHK is blocked by HD2**
-
 ## Gear Options
 Screen read your current gear options to determine your inventory layout
 
