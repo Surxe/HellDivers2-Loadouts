@@ -83,18 +83,6 @@ def get_loadouts_api():
     """Returns the current list of loadouts."""
     return jsonify({"loadouts": get_loadouts()})
 
-
-@app.route('/edit_loadout', methods=['GET', 'POST'])
-def edit_loadout():
-    if request.method == 'POST':
-        # Edit the loadout name from the form
-        old_name = request.form['old_name']
-        new_name = request.form['new_name']
-        if old_name in loadouts:
-            loadouts[loadouts.index(old_name)] = new_name
-        return redirect(url_for('home'))
-    return render_template('edit_loadout.html', loadouts=loadouts)
-
 if __name__ == '__main__':
     app.run(debug=True)
 
