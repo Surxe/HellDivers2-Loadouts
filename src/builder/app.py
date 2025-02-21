@@ -78,7 +78,10 @@ def create_loadout():
     
     return jsonify({"message": "Failed to create loadout."})
 
-    
+@app.route('/get_loadouts', methods=['GET'])
+def get_loadouts_api():
+    """Returns the current list of loadouts."""
+    return jsonify({"loadouts": get_loadouts()})
 
 
 @app.route('/edit_loadout', methods=['GET', 'POST'])

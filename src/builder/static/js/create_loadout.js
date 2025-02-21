@@ -26,3 +26,14 @@ function update_loadouts_list(loadouts) {
         loadoutsList.appendChild(listItem);
     });
 }
+
+// Load existing loadouts when page loads
+window.onload = async function () {
+    try {
+        const response = await fetch("/get_loadouts");
+        const data = await response.json();
+        update_loadouts_list(data.loadouts);
+    } catch (error) {
+        console.error("Failed to fetch loadouts:", error);
+    }
+};
