@@ -1,8 +1,6 @@
 # Import parent path
 import sys
 import os
-
-import jsonify.convert
 parent_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '../..'))
 sys.path.append(parent_dir)
 
