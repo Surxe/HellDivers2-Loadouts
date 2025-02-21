@@ -8,7 +8,7 @@ sys.path.append(parent_dir)
 import json
 
 # Import local libraries
-from src.equip.Loadout import Loadout
+from src.Loadout import Loadout
 
 # Args are received to sys.argv
 loadout_name = sys.argv[1] if len(sys.argv) > 1 else "loadout1"
