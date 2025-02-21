@@ -73,10 +73,34 @@ def create_loadout():
     
         return jsonify({
             "path": file_path,
+            "loadout_name": loadout_name,
             "loadouts": get_loadouts()  # Send updated list to frontend
         })
     
     return jsonify({"error": "Failed to create loadout."})
+
+@app.route('/rename_loadout', methods=['POST'])
+def rename_loadout():
+    data = request.get_json()
+    old_name = data['old_name']
+    new_name = data['new_name']
+    old_path = os.path.join(loadouts_dir, f"{old_name}.json")
+    new_path = os.path.join(loadouts_dir, f"{new_name}.json")
+
+    # Ensure the 'loadouts' directory exists
+    if not os.path.exists(loadouts_dir):
+        os.makedirs(loadouts_dir)
+
+    # Rename the file
+    os.rename(old_path, new_path)
+
+    return jsonify({
+        "old_name": old_name,
+        "new_name": new_name,
+        "loadouts": get_loadouts()  # Send updated list to frontend
+    })
+
+@app.route('/delete_loadout', methods=['POST'])
 
 @app.route('/get_loadouts', methods=['GET'])
 def get_loadouts_api():
