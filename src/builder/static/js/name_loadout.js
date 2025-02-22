@@ -1,4 +1,4 @@
-async function name_loadout(old_loadout_name, is_brand_new=false) {
+async function name_loadout(old_loadout_file_name, is_brand_new=false) {
     // Request a new name for the loadout
     // Add a new input field to the prompt section, wait for user to click submit
 
@@ -6,8 +6,10 @@ async function name_loadout(old_loadout_name, is_brand_new=false) {
     const prompt = is_brand_new ? "Enter a name for the new loadout" : "Enter a new name for the loadout";
     const default_value = is_brand_new ? "" : old_loadout_name;
     await show_prompt(prompt, default_value)
+    const input_field = document.getElementById("input");
     const output_field = document.getElementById("output");
-    const new_loadout_name = sanitized_to_file_name(output_field.textContent);
+    const new_loadout_name = input_field.value;
+    const new_loadout_file_name = output_field.textContent;
     remove_prompt(document.getElementById("prompt_section"));
 
     if (!new_loadout_name) {
@@ -17,7 +19,8 @@ async function name_loadout(old_loadout_name, is_brand_new=false) {
         const response = await fetch("/name_loadout", {
             method: "POST",
             body: JSON.stringify({ 
-                old_name: old_loadout_name, 
+                old_file_name: old_loadout_file_name, 
+                new_file_name: new_loadout_file_name,
                 new_name: new_loadout_name,
                 is_brand_new: is_brand_new
             }),

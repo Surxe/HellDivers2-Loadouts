@@ -12,11 +12,6 @@ function sanitize_input(file_name, replacement="_", max_length=50) {
     return file_name.substring(0, max_length);
 }
 
-function sanitized_to_file_name(sanitized_name, replacement="_") {
-    // Replace spaces with underscores
-    return sanitized_name
-}
-
 function sanitize_and_display() {
     const input_field = document.getElementById("input")
     const output_field = document.getElementById("output")

@@ -82,20 +82,34 @@ def create_loadout():
 @app.route('/name_loadout', methods=['POST'])
 def name_loadout():
     data = request.get_json()
-    old_name = data['old_name']
+    old_file_name = data['old_file_name']
+    new_file_name = data['new_file_name']
     new_name = data['new_name']
     is_brand_new = data['is_brand_new']
-    old_path = os.path.join(loadouts_dir, f"{old_name}.json")
-    new_path = os.path.join(loadouts_dir, f"{new_name}.json")
+    old_path = os.path.join(loadouts_dir, f"{old_file_name}.json")
+    new_path = os.path.join(loadouts_dir, f"{new_file_name}.json")
 
     # Ensure the 'loadouts' directory exists
     if not os.path.exists(loadouts_dir):
         os.makedirs(loadouts_dir)
 
-    file_renamed = not (old_name == new_name)
-    file_exists = os.path.exists(new_path)
+    new_alr_exists = os.path.exists(new_path)
+
+    # Get the old name of the loadout
+    # Load the old loadout
+    old_name = ""
+    with open(old_path, 'r') as file:
+        old_loadout = json.load(file)
+        old_name = old_loadout.get('Loadout_Name', None)
+        if old_name is None:
+            return jsonify({"error": f"Failed to rename loadout. \"Loadout_Name\" not found in \"{old_file_name}.json\"."})
+    if old_name == "":
+        return jsonify({"error": f"Failed to rename loadout. Failed to open \"{old_file_name}.json\"."})
+
+    loadout_renamed = not (old_name == new_name)
+    
     conditions_to_decision = {
-       #(is_brand_new, file_renamed, file_exists): (should_rename, response_type)
+       #(is_brand_new, loadout_renamed, new_alr_exists): (should_rename, response_type)
         (True, True, True): (False, "retry"), # if its brand new and the file name was changed and it already exists
         (True, True, False): (True, "create"), # if its brand new and the file name was changed and it does not exist
         (True, False, True): (False, "create"), # if its brand new and the file name was not changed then it already exists
@@ -105,11 +119,18 @@ def name_loadout():
         (False, False, True): (False, "nothing"), # if its not brand new and the file name was not changed then it already exists
         (False, False, False): (False, "nothing") # same as above
     }
-    decision = conditions_to_decision[(is_brand_new, file_renamed, file_exists)]
+    decision = conditions_to_decision[(is_brand_new, loadout_renamed, new_alr_exists)]
     rename, response_type = decision
 
     if rename:
         os.rename(old_path, new_path)
+        old_loadout['Loadout_Name'] = new_name
+        new_path_opened = False
+        with open(new_path, 'w') as file:
+            new_path_opened = True
+            json.dump(old_loadout, file, indent=4)
+        if not new_path_opened:
+            return jsonify({"error": f"Failed to rename loadout. Failed to write \"{new_file_name}.json\"."})
 
     response_type_to_response = {
        #response_type: response
