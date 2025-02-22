@@ -3,8 +3,12 @@ async function rename_loadout(old_loadout_name, is_brand_new=false) {
     // Add a new input field to the prompt section, wait for user to click submit
 
     // If its brand new the current loadout name has no relevancy to be displayed
+    const prompt = is_brand_new ? "Enter a name for the new loadout" : "Enter a new name for the loadout";
     const default_value = is_brand_new ? "" : old_loadout_name;
-    const new_loadout_name = await get_user_input("Enter a new name for the loadout", default_value);
+    await show_prompt(prompt, default_value)
+    const output_field = document.getElementById("output");
+    const new_loadout_name = sanitized_to_file_name(output_field.textContent);
+    remove_prompt(document.getElementById("prompt_section"));
 
     if (!new_loadout_name) {
         return;

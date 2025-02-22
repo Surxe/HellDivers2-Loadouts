@@ -1,7 +1,7 @@
 function show_prompt(prompt, default_value="") {
     return new Promise((resolve) => {
         const prompt_section = document.getElementById("prompt_section");
-        prompt_section.innerHTML = ''; // Clear previous content
+        remove_prompt(prompt_section);
 
         // Create label
         const label = document.createElement("label");
@@ -30,7 +30,6 @@ function show_prompt(prompt, default_value="") {
         // Handle submission
         button.addEventListener("click", () => {
             resolve(input.value);
-            prompt_section.innerHTML = ''; // Clear after submission
         });
 
         // Append elements
@@ -47,12 +46,6 @@ function show_prompt(prompt, default_value="") {
     });
 }
 
-async function get_user_input(prompt, default_value="") {
-    const user_input = await show_prompt(prompt, default_value);
-
-    
-        
-
-    console.log("User input:", user_input);
-    return user_input;
+function remove_prompt(prompt_section) {
+    prompt_section.innerHTML = ''; // Clear previous content
 }
