@@ -11,7 +11,7 @@ async function create_loadout() {
 
         const data = await response.json();
         if (response.ok) {
-            await rename_loadout(data.loadout_name, true); // Rename the current loadout
+            await name_loadout(data.loadout_name, true); // Rename the current loadout
         } else {
             alert("Error: " + data.error);
         }

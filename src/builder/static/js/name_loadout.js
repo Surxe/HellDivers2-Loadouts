@@ -1,4 +1,4 @@
-async function rename_loadout(old_loadout_name, is_brand_new=false) {
+async function name_loadout(old_loadout_name, is_brand_new=false) {
     // Request a new name for the loadout
     // Add a new input field to the prompt section, wait for user to click submit
 
@@ -14,7 +14,7 @@ async function rename_loadout(old_loadout_name, is_brand_new=false) {
         return;
     }
     try {
-        const response = await fetch("/rename_loadout", {
+        const response = await fetch("/name_loadout", {
             method: "POST",
             body: JSON.stringify({ 
                 old_name: old_loadout_name, 
@@ -28,7 +28,7 @@ async function rename_loadout(old_loadout_name, is_brand_new=false) {
         if (response.ok) {
             if (data.retry) {
                 alert(data.message);
-                rename_loadout(old_loadout_name, is_brand_new); // Retry renaming
+                name_loadout(old_loadout_name, is_brand_new); // Retry renaming
                 return;
             }
             if (data.loadouts) {

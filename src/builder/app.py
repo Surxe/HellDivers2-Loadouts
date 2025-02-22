@@ -79,8 +79,8 @@ def create_loadout():
     
     return jsonify({"error": "Failed to create loadout."})
 
-@app.route('/rename_loadout', methods=['POST'])
-def rename_loadout():
+@app.route('/name_loadout', methods=['POST'])
+def name_loadout():
     data = request.get_json()
     old_name = data['old_name']
     new_name = data['new_name']
