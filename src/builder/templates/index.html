@@ -11,11 +11,9 @@
         <script src="{{ url_for('static', filename='js/create_loadout.js') }}" defer></script>
         <script src="{{ url_for('static', filename='js/rename_loadout.js') }}" defer></script>
         <script src="{{ url_for('static', filename='js/prompt.js') }}" defer></script>
-        <section id="prompt_section">
-            
-        </section>
+        <script src="{{ url_for('static', filename='js/sanitize.js') }}" defer></script>
+        <section id="prompt_section"></section>
 
-        
         <button onclick="create_loadout()">Create Loadout</button>
         <div id="loading_message" style="display: none;">Creating loadout...</div>
     </nav>

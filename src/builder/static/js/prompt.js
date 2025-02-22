@@ -6,14 +6,22 @@ function show_prompt(prompt, default_value="") {
         // Create label
         const label = document.createElement("label");
         label.textContent = prompt;
-        label.setAttribute("for", "user_input");
+        label.setAttribute("for", "input");
 
         // Create input field
         const input = document.createElement("input");
         input.type = "text";
-        input.id = "user_input";
-        input.name = "user_input";
+        input.id = "input";
+        input.name = "input";
+        input.oninput = sanitize_and_display;
         input.textContent = default_value
+
+        // Create output field
+        const output = document.createElement("p");
+        output.textContent = "Sanitized filename: ";
+        const output_span = document.createElement("span");
+        output_span.id = "output";
+        output.appendChild(output_span);
 
         // Create submit button
         const button = document.createElement("button");
@@ -30,30 +38,13 @@ function show_prompt(prompt, default_value="") {
         prompt_section.appendChild(document.createElement("br"));
         prompt_section.appendChild(input);
         prompt_section.appendChild(document.createElement("br"));
+        prompt_section.appendChild(output);
+        prompt_section.appendChild(document.createElement("br"));
         prompt_section.appendChild(button);
 
         // Autofocus on input field
         input.focus();
     });
-}
-
-function sanitize_input(file_name, replacement="_", max_length=50) {
-    // Remove unsafe characters (anything not alphanumeric, space, dot, underscore, or hyphen)
-    file_name = file_name.replace(/[<>:"/\\|?*\x00-\x1F]/g, replacement);
-
-    // Replace multiple spaces or special characters with a single replacement
-    file_name = file_name.replace(/\W+/g, replacement); // Remove non-word characters
-
-    // Trim excessive replacements (avoid "__" or "--" sequences)
-    file_name = file_name.replace(new RegExp(`${replacement}+`, "g"), replacement).trim(replacement);
-
-    // Ensure filename isn't too long
-    return file_name.substring(0, max_length);
-}
-
-function sanitized_to_file_name(sanitized_name, replacement="_") {
-    // Replace spaces with underscores
-    return sanitized_name.replace(/\s+/g, replacement);
 }
 
 async function get_user_input(prompt, default_value="") {
