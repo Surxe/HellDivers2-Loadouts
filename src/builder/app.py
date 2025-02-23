@@ -19,11 +19,25 @@ from flask import Flask, render_template, request, redirect, url_for, jsonify
 # Define the absolute path to the 'loadouts' directory
 repo_path = os.getenv('REPOSITORY_PATH')  # Absolute path to the repository folder
 loadouts_dir = os.path.join(repo_path, "src/loadouts")  # Absolute path to the loadouts folder
-    
+
+loadouts_list_cache = []
 
 def get_loadouts():
     """Retrieve the list of existing loadouts."""
-    return [f[:-5] for f in os.listdir(loadouts_dir) if f.endswith('.json')]
+    for loadout_path in os.listdir(loadouts_dir):
+        if loadout_path.endswith('.json'):
+            with open(os.path.join(loadouts_dir, loadout_path), 'r') as file:
+                loadout = json.load(file)
+                loadout_name = loadout.get('Loadout_Name', None)
+                if loadout_name is None:
+                    return jsonify({"error": f"Failed to get loadouts. \"Loadout_Name\" not found in \"{loadout_path}\"."})
+                
+                loadouts_list_cache.append(loadout_name)
+
+            if loadout_name == "":
+                return jsonify({"error": f"Failed to get loadouts. Failed to open \"{loadout_path}\"."})
+            
+    return jsonify({"loadouts": loadouts_list_cache})
 
 @app.route('/')
 def home():
@@ -33,7 +47,7 @@ def home():
 def make_default_loadout_name(i=1):
     # Check if loadout{i} exists
     name = f'loadout{i}'
-    if name in get_loadouts():
+    if name in loadouts_list_cache:
         return make_default_loadout_name(i+1)
     return name
 
@@ -74,7 +88,7 @@ def create_loadout():
         return jsonify({
             "path": file_path,
             "loadout_name": loadout_name,
-            "loadouts": get_loadouts()  # Send updated list to frontend
+            "loadouts": loadouts_list_cache  # Send updated list to frontend
         })
     
     return jsonify({"error": "Failed to create loadout."})
@@ -140,11 +154,11 @@ def name_loadout():
         },
         "create": {
             "message": "Loadout \"" + new_name + "\" created.",
-            "loadouts": get_loadouts()
+            "loadouts": loadouts_list_cache
         },
         "rename": {
             "message": "Loadout \"" + old_name + "\" renamed to \"" + new_name + "\".",
-            "loadouts": get_loadouts()
+            "loadouts": loadouts_list_cache
         },
         "nothing": {
             "message": "Loadout name unchanged."
@@ -156,10 +170,37 @@ def name_loadout():
 
 @app.route('/delete_loadout', methods=['POST'])
 
+@app.route('/update_loadouts_list_cache', methods=['POST'])
+def update_loadouts_list_cache():
+    data = request.get_json()
+    append_loadouts = data.get('append_loadouts', []) # [list of loadouts to append]
+    rename_loadouts = data.get('rename_loadouts', []) # [list of tuples (old_name, new_name) to rename]
+    delete_loadouts = data.get('delete_loadouts', []) # [list of loadouts to delete]
+    
+    for loadout in append_loadouts:
+        if loadout in loadouts_list_cache:
+            return jsonify({"error": f"Failed to update loadouts list cache. Loadout \"{loadout}\" already exists."})
+        loadouts_list_cache.append(loadout)
+    for old_name, new_name in rename_loadouts:
+        if old_name not in loadouts_list_cache:
+            return jsonify({"error": f"Failed to update loadouts list cache. Loadout \"{old_name}\" not found."})
+        if new_name in loadouts_list_cache:
+            return jsonify({"error": f"Failed to update loadouts list cache. Loadout \"{new_name}\" already exists."})
+        loadouts_list_cache.remove(old_name)
+        loadouts_list_cache.append(new_name)
+    for loadout in delete_loadouts:
+        if loadout not in loadouts_list_cache:
+            return jsonify({"error": f"Failed to update loadouts list cache. Loadout \"{loadout}\" not found."})
+        loadouts_list_cache.remove(loadout)
+
+    return jsonify({"loadouts": loadouts_list_cache})
+
 @app.route('/get_loadouts', methods=['GET'])
 def get_loadouts_api():
     """Returns the current list of loadouts."""
-    return jsonify({"loadouts": get_loadouts()})
+    if not loadouts_list_cache: # If the cache is empty, initialize it
+        return get_loadouts()
+    return jsonify({"loadouts": loadouts_list_cache})
 
 if __name__ == '__main__':
     app.run(debug=True)
