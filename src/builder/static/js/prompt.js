@@ -16,6 +16,14 @@ function show_prompt(prompt, default_value="") {
         input.oninput = sanitize_and_display;
         input.textContent = default_value
 
+        // Allow {Enter} to submit
+        input.addEventListener("keyup", (event) => {
+            if (event.key === "Enter") {
+                event.preventDefault();
+                resolve(input.value);
+            }
+        });
+
         // Create output field
         const output = document.createElement("p");
         output.textContent = "Sanitized filename: ";
