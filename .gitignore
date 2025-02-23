@@ -172,4 +172,4 @@ cython_debug/
 
 # Internal repository ignores
 .env
-src/loadouts
+src/loadouts/
