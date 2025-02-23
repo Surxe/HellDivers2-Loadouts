@@ -26,7 +26,7 @@ function show_prompt(prompt, default_value="") {
 
         // Create output field
         const output = document.createElement("p");
-        output.textContent = "Sanitized filename: ";
+        output.textContent = "File name will be saved as: ";
         const output_span = document.createElement("span");
         output_span.id = "output";
         output.appendChild(output_span);
@@ -40,14 +40,16 @@ function show_prompt(prompt, default_value="") {
             resolve(input.value);
         });
 
+        // Add input and submit in a div such that input is on the left and submit is on the right
+        const div = document.createElement("div");
+        div.appendChild(input);
+        div.appendChild(button);
+
         // Append elements
         prompt_section.appendChild(label);
         prompt_section.appendChild(document.createElement("br"));
-        prompt_section.appendChild(input);
-        prompt_section.appendChild(document.createElement("br"));
+        prompt_section.appendChild(div);
         prompt_section.appendChild(output);
-        prompt_section.appendChild(document.createElement("br"));
-        prompt_section.appendChild(button);
 
         // Autofocus on input field
         input.focus();
