@@ -169,8 +169,6 @@ def name_loadout():
     response = response_type_to_response[response_type]
     return jsonify(response)
 
-@app.route('/edit_loadout', methods=['POST'])
-
 @app.route('/update_loadouts_list_cache', methods=['POST'])
 def update_loadouts_list_cache():
     data = request.get_json()
@@ -202,6 +200,23 @@ def get_loadouts_api():
     if not loadouts_list_cache: # If the cache is empty, initialize it
         return get_loadouts()
     return jsonify({"loadouts": loadouts_list_cache})
+
+@app.route('/edit_loadout')
+def edit_loadout():
+    loadout_id = request.args.get('loadout_id')
+    if not loadout_id:
+        return "Error: No loadout ID specified.", 400
+
+    loadout_path = os.path.join(loadouts_dir, f"{loadout_id}.json")
+
+    # Get the loadout data
+    loadout_data = {}
+    with open(loadout_path, 'r') as file:
+        loadout_data = json.load(file)
+    if not loadout_data:
+        return "Error: Failed to load loadout data.", 400
+    
+    return render_template('edit_loadout.html', loadout=loadout_data)
 
 if __name__ == '__main__':
     app.run(debug=True)
