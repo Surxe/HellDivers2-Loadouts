@@ -24,18 +24,19 @@ loadouts_list_cache = []
 
 def get_loadouts():
     """Retrieve the list of existing loadouts."""
-    for loadout_path in os.listdir(loadouts_dir):
-        if loadout_path.endswith('.json'):
-            with open(os.path.join(loadouts_dir, loadout_path), 'r') as file:
+    for loadout_file_name in os.listdir(loadouts_dir):
+        if loadout_file_name.endswith('.json'):
+            with open(os.path.join(loadouts_dir, loadout_file_name), 'r') as file:
+                loadout_id = loadout_file_name.split('.')[0]
                 loadout = json.load(file)
                 loadout_name = loadout.get('Loadout_Name', None)
                 if loadout_name is None:
-                    return jsonify({"error": f"Failed to get loadouts. \"Loadout_Name\" not found in \"{loadout_path}\"."})
+                    return jsonify({"error": f"Failed to get loadouts. \"Loadout_Name\" not found in \"{loadout_file_name}\"."})
                 
-                loadouts_list_cache.append(loadout_name)
+                loadouts_list_cache.append({"id": loadout_id, "name": loadout_name})
 
             if loadout_name == "":
-                return jsonify({"error": f"Failed to get loadouts. Failed to open \"{loadout_path}\"."})
+                return jsonify({"error": f"Failed to get loadouts. Failed to open \"{loadout_file_name}\"."})
             
     return jsonify({"loadouts": loadouts_list_cache})
 
@@ -47,7 +48,7 @@ def home():
 def make_default_loadout_name(i=1):
     # Check if loadout{i} exists
     name = f'loadout{i}'
-    if name in loadouts_list_cache:
+    if name in any(loadout["name"] for loadout in loadouts_list_cache):
         return make_default_loadout_name(i+1)
     return name
 
@@ -168,7 +169,7 @@ def name_loadout():
     response = response_type_to_response[response_type]
     return jsonify(response)
 
-@app.route('/delete_loadout', methods=['POST'])
+@app.route('/edit_loadout', methods=['POST'])
 
 @app.route('/update_loadouts_list_cache', methods=['POST'])
 def update_loadouts_list_cache():

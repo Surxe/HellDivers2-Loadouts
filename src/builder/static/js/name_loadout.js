@@ -39,7 +39,7 @@ async function name_loadout(old_loadout_file_name, is_brand_new=false) {
                 const response = await fetch("/update_loadouts_list_cache", {
                     method: "POST",
                     body: JSON.stringify({ 
-                        append_loadouts: [new_loadout_name]
+                        append_loadouts: [{"id": new_loadout_file_name, "name": new_loadout_name}]
                     }),
                     headers: { "Content-Type": "application/json" }
                 })
