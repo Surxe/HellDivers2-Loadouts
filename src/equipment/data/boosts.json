@@ -1,0 +1,100 @@
+{
+    "hellpod-space-optimization": {
+        "id": "hellpod-space-optimization",
+        "name": "Hellpod Space Optimization",
+        "wiki_file_name": "Hellpod Space Optimization Booster Icon.svg",
+        "parent_dirs": "boosts",
+        "file_extension": "svg"
+    },
+    "vitality-enhancement": {
+        "id": "vitality-enhancement",
+        "name": "Vitality Enhancement",
+        "wiki_file_name": "Vitality Enhancement Booster Icon.svg",
+        "parent_dirs": "boosts",
+        "file_extension": "svg"
+    },
+    "uav-recon-booster": {
+        "id": "uav-recon-booster",
+        "name": "UAV Recon Booster",
+        "wiki_file_name": "UAV Recon Booster Booster Icon.svg",
+        "parent_dirs": "boosts",
+        "file_extension": "svg"
+    },
+    "stamina-enhancement": {
+        "id": "stamina-enhancement",
+        "name": "Stamina Enhancement",
+        "wiki_file_name": "Stamina Enhancement Booster Icon.svg",
+        "parent_dirs": "boosts",
+        "file_extension": "svg"
+    },
+    "muscle-enhancement": {
+        "id": "muscle-enhancement",
+        "name": "Muscle Enhancement",
+        "wiki_file_name": "Muscle Enhancement Booster Icon.svg",
+        "parent_dirs": "boosts",
+        "file_extension": "svg"
+    },
+    "increased-reinforcement-budget": {
+        "id": "increased-reinforcement-budget",
+        "name": "Increased Reinforcement Budget",
+        "wiki_file_name": "Increased Reinforcement Budget Booster Icon.svg",
+        "parent_dirs": "boosts",
+        "file_extension": "svg"
+    },
+    "flexible-reinforcement-budget": {
+        "id": "flexible-reinforcement-budget",
+        "name": "Flexible Reinforcement Budget",
+        "wiki_file_name": "Flexible Reinforcement Budget Booster Icon.svg",
+        "parent_dirs": "boosts",
+        "file_extension": "svg"
+    },
+    "localization-confusion": {
+        "id": "localization-confusion",
+        "name": "Localization Confusion",
+        "wiki_file_name": "Localization Confusion Booster Icon.svg",
+        "parent_dirs": "boosts",
+        "file_extension": "svg"
+    },
+    "expert-extraction-pilot": {
+        "id": "expert-extraction-pilot",
+        "name": "Expert Extraction Pilot",
+        "wiki_file_name": "Expert Extraction Pilot Booster Icon.svg",
+        "parent_dirs": "boosts",
+        "file_extension": "svg"
+    },
+    "motivational-shocks": {
+        "id": "motivational-shocks",
+        "name": "Motivational Shocks",
+        "wiki_file_name": "Motivational Shocks Booster Icon.svg",
+        "parent_dirs": "boosts",
+        "file_extension": "svg"
+    },
+    "experimental-infusion": {
+        "id": "experimental-infusion",
+        "name": "Experimental Infusion",
+        "wiki_file_name": "Experimental Infusion Booster Icon.svg",
+        "parent_dirs": "boosts",
+        "file_extension": "svg"
+    },
+    "firebomb-hellpods": {
+        "id": "firebomb-hellpods",
+        "name": "Firebomb Hellpods",
+        "wiki_file_name": "Firebomb Hellpods Booster Icon.svg",
+        "parent_dirs": "boosts",
+        "file_extension": "svg"
+    },
+    "dead-sprint": {
+        "id": "dead-sprint",
+        "name": "Dead Sprint",
+        "wiki_file_name": "Dead Sprint Booster Icon.svg",
+        "parent_dirs": "boosts",
+        "file_extension": "svg"
+    },
+    "armed-resupply-pods": {
+        "id": "armed-resupply-pods",
+        "name": "Armed Resupply Pods",
+        "wiki_file_name": "Armed Resupply Pods Booster Icon.svg",
+        "parent_dirs": "boosts",
+        "file_extension": "svg"
+    }
+}

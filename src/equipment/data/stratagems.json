@@ -1,0 +1,498 @@
+{
+    "mg43-machine-gun": {
+        "id": "mg43-machine-gun",
+        "name": "MG-43 Machine Gun",
+        "wiki_file_name": "Machine Gun Stratagem Icon.png",
+        "parent_dirs": "stratagems/patriotic-administration-center",
+        "file_extension": "png",
+        "department": "Patriotic Administration Center"
+    },
+    "apw1-anti-materiel-rifle": {
+        "id": "apw1-anti-materiel-rifle",
+        "name": "APW-1 Anti-Materiel Rifle",
+        "wiki_file_name": "Anti-Materiel Rifle Stratagem Icon.png",
+        "parent_dirs": "stratagems/patriotic-administration-center",
+        "file_extension": "png",
+        "department": "Patriotic Administration Center"
+    },
+    "m105-stalwart": {
+        "id": "m105-stalwart",
+        "name": "M-105 Stalwart",
+        "wiki_file_name": "Stalwart Stratagem Icon.png",
+        "parent_dirs": "stratagems/patriotic-administration-center",
+        "file_extension": "png",
+        "department": "Patriotic Administration Center"
+    },
+    "eat17-expendable-anti-tank": {
+        "id": "eat17-expendable-anti-tank",
+        "name": "EAT-17 Expendable Anti-Tank",
+        "wiki_file_name": "Expendable Anti-Tank Stratagem Icon.png",
+        "parent_dirs": "stratagems/patriotic-administration-center",
+        "file_extension": "png",
+        "department": "Patriotic Administration Center"
+    },
+    "gr8-recoilless-rifle": {
+        "id": "gr8-recoilless-rifle",
+        "name": "GR-8 Recoilless Rifle",
+        "wiki_file_name": "Recoilless Rifle Stratagem Icon.png",
+        "parent_dirs": "stratagems/patriotic-administration-center",
+        "file_extension": "png",
+        "department": "Patriotic Administration Center"
+    },
+    "flam40-flamethrower": {
+        "id": "flam40-flamethrower",
+        "name": "FLAM-40 Flamethrower",
+        "wiki_file_name": "Flamethrower Stratagem Icon.png",
+        "parent_dirs": "stratagems/patriotic-administration-center",
+        "file_extension": "png",
+        "department": "Patriotic Administration Center"
+    },
+    "ac8-autocannon": {
+        "id": "ac8-autocannon",
+        "name": "AC-8 Autocannon",
+        "wiki_file_name": "Autocannon Stratagem Icon.png",
+        "parent_dirs": "stratagems/patriotic-administration-center",
+        "file_extension": "png",
+        "department": "Patriotic Administration Center"
+    },
+    "mg206-heavy-machine-gun": {
+        "id": "mg206-heavy-machine-gun",
+        "name": "MG-206 Heavy Machine Gun",
+        "wiki_file_name": "Heavy Machine Gun Stratagem Icon.png",
+        "parent_dirs": "stratagems/patriotic-administration-center",
+        "file_extension": "png",
+        "department": "Patriotic Administration Center"
+    },
+    "rl77-airburst-rocket-launcher": {
+        "id": "rl77-airburst-rocket-launcher",
+        "name": "RL-77 Airburst Rocket Launcher",
+        "wiki_file_name": "RL-77 Airburst Rocket Launcher Stratagem Icon.png",
+        "parent_dirs": "stratagems/patriotic-administration-center",
+        "file_extension": "png",
+        "department": "Patriotic Administration Center"
+    },
+    "mls4x-commando": {
+        "id": "mls4x-commando",
+        "name": "MLS-4X Commando",
+        "wiki_file_name": "Commando Stratagem Icon.png",
+        "parent_dirs": "stratagems/patriotic-administration-center",
+        "file_extension": "png",
+        "department": "Patriotic Administration Center"
+    },
+    "rs422-railgun": {
+        "id": "rs422-railgun",
+        "name": "RS-422 Railgun",
+        "wiki_file_name": "Railgun Stratagem Icon.png",
+        "parent_dirs": "stratagems/patriotic-administration-center",
+        "file_extension": "png",
+        "department": "Patriotic Administration Center"
+    },
+    "faf14-spear": {
+        "id": "faf14-spear",
+        "name": "FAF-14 Spear",
+        "wiki_file_name": "Spear Stratagem Icon.png",
+        "parent_dirs": "stratagems/patriotic-administration-center",
+        "file_extension": "png",
+        "department": "Patriotic Administration Center"
+    },
+    "stax3-wasp": {
+        "id": "stax3-wasp",
+        "name": "StA-X3 W.A.S.P. Launcher",
+        "wiki_file_name": "StA-X3 W.A.S.P. Launcher Stratagem Icon.png",
+        "parent_dirs": "stratagems/patriotic-administration-center",
+        "file_extension": "png",
+        "department": "Patriotic Administration Center"
+    },
+    "orbital-gatling-barrage": {
+        "id": "orbital-gatling-barrage",
+        "name": "Orbital Gatling Barrage",
+        "wiki_file_name": "Orbital Gatling Barrage Stratagem Icon.png",
+        "parent_dirs": "stratagems/orbital-cannons",
+        "file_extension": "png",
+        "department": "Orbital Cannons"
+    },
+    "orbital-airburst-strike": {
+        "id": "orbital-airburst-strike",
+        "name": "Orbital Airburst Strike",
+        "wiki_file_name": "Orbital Airburst Strike Stratagem Icon.png",
+        "parent_dirs": "stratagems/orbital-cannons",
+        "file_extension": "png",
+        "department": "Orbital Cannons"
+    },
+    "orbital-120mm-he-barrage": {
+        "id": "orbital-120mm-he-barrage",
+        "name": "Orbital 120mm HE Barrage",
+        "wiki_file_name": "Orbital 120mm HE Barrage Stratagem Icon.png",
+        "parent_dirs": "stratagems/orbital-cannons",
+        "file_extension": "png",
+        "department": "Orbital Cannons"
+    },
+    "orbital-380mm-he-barrage": {
+        "id": "orbital-380mm-he-barrage",
+        "name": "Orbital 380mm HE Barrage",
+        "wiki_file_name": "Orbital 380mm HE Barrage Stratagem Icon.png",
+        "parent_dirs": "stratagems/orbital-cannons",
+        "file_extension": "png",
+        "department": "Orbital Cannons"
+    },
+    "orbital-walking-barrage": {
+        "id": "orbital-walking-barrage",
+        "name": "Orbital Walking Barrage",
+        "wiki_file_name": "Orbital Walking Barrage Stratagem Icon.png",
+        "parent_dirs": "stratagems/orbital-cannons",
+        "file_extension": "png",
+        "department": "Orbital Cannons"
+    },
+    "orbital-laser": {
+        "id": "orbital-laser",
+        "name": "Orbital Laser",
+        "wiki_file_name": "Orbital Laser Stratagem Icon.png",
+        "parent_dirs": "stratagems/orbital-cannons",
+        "file_extension": "png",
+        "department": "Orbital Cannons"
+    },
+    "orbital-napalm-barrage": {
+        "id": "orbital-napalm-barrage",
+        "name": "Orbital Napalm Barrage",
+        "wiki_file_name": "Orbital Napalm Barrage Stratagem Icon.png",
+        "parent_dirs": "stratagems/orbital-cannons",
+        "file_extension": "png",
+        "department": "Orbital Cannons"
+    },
+    "orbital-railcannon-strike": {
+        "id": "orbital-railcannon-strike",
+        "name": "Orbital Railcannon Strike",
+        "wiki_file_name": "Orbital Railcannon Strike Stratagem Icon.png",
+        "parent_dirs": "stratagems/orbital-cannons",
+        "file_extension": "png",
+        "department": "Orbital Cannons"
+    },
+    "eagle-strafing-run": {
+        "id": "eagle-strafing-run",
+        "name": "Eagle Strafing Run",
+        "wiki_file_name": "Eagle Strafing Run Stratagem Icon.png",
+        "parent_dirs": "stratagems/hangar",
+        "file_extension": "png",
+        "department": "Hangar"
+    },
+    "eagle-airstrike": {
+        "id": "eagle-airstrike",
+        "name": "Eagle Airstrike",
+        "wiki_file_name": "Eagle Airstrike Stratagem Icon.png",
+        "parent_dirs": "stratagems/hangar",
+        "file_extension": "png",
+        "department": "Hangar"
+    },
+    "eagle-cluster-bomb": {
+        "id": "eagle-cluster-bomb",
+        "name": "Eagle Cluster Bomb",
+        "wiki_file_name": "Eagle Cluster Bomb Stratagem Icon.png",
+        "parent_dirs": "stratagems/hangar",
+        "file_extension": "png",
+        "department": "Hangar"
+    },
+    "eagle-napalm-airstrike": {
+        "id": "eagle-napalm-airstrike",
+        "name": "Eagle Napalm Airstrike",
+        "wiki_file_name": "Eagle Napalm Airstrike Stratagem Icon.png",
+        "parent_dirs": "stratagems/hangar",
+        "file_extension": "png",
+        "department": "Hangar"
+    },
+    "lift850-jump-pack": {
+        "id": "lift850-jump-pack",
+        "name": "LIFT-850 Jump Pack",
+        "wiki_file_name": "Jump Pack Stratagem Icon.png",
+        "parent_dirs": "stratagems/hangar",
+        "file_extension": "png",
+        "department": "Hangar"
+    },
+    "eagle-smoke-strike": {
+        "id": "eagle-smoke-strike",
+        "name": "Eagle Smoke Strike",
+        "wiki_file_name": "Eagle Smoke Strike Stratagem Icon.png",
+        "parent_dirs": "stratagems/hangar",
+        "file_extension": "png",
+        "department": "Hangar"
+    },
+    "eagle-110mm-rocket-pods": {
+        "id": "eagle-110mm-rocket-pods",
+        "name": "Eagle 110mm Rocket Pods",
+        "wiki_file_name": "Eagle 110mm Rocket Pods Stratagem Icon.png",
+        "parent_dirs": "stratagems/hangar",
+        "file_extension": "png",
+        "department": "Hangar"
+    },
+    "eagle-500kg-bomb": {
+        "id": "eagle-500kg-bomb",
+        "name": "Eagle 500kg Bomb",
+        "wiki_file_name": "Eagle 500kg Bomb Stratagem Icon.png",
+        "parent_dirs": "stratagems/hangar",
+        "file_extension": "png",
+        "department": "Hangar"
+    },
+    "m102-fast-recon-vehicle": {
+        "id": "m102-fast-recon-vehicle",
+        "name": "M-102 Fast Recon Vehicle",
+        "wiki_file_name": "M-102 Fast Recon Vehicle Stratagem Icon.png",
+        "parent_dirs": "stratagems/hangar",
+        "file_extension": "png",
+        "department": "Hangar"
+    },
+    "orbital-precision-strike": {
+        "id": "orbital-precision-strike",
+        "name": "Orbital Precision Strike",
+        "wiki_file_name": "Orbital Precision Strike Stratagem Icon.png",
+        "parent_dirs": "stratagems/bridge",
+        "file_extension": "png",
+        "department": "Bridge"
+    },
+    "orbital-gas-strike": {
+        "id": "orbital-gas-strike",
+        "name": "Orbital Gas Strike",
+        "wiki_file_name": "Orbital Gas Strike Stratagem Icon.png",
+        "parent_dirs": "stratagems/bridge",
+        "file_extension": "png",
+        "department": "Bridge"
+    },
+    "orbital-ems-strike": {
+        "id": "orbital-ems-strike",
+        "name": "Orbital EMS Strike",
+        "wiki_file_name": "Orbital EMS Strike Stratagem Icon.png",
+        "parent_dirs": "stratagems/bridge",
+        "file_extension": "png",
+        "department": "Bridge"
+    },
+    "orbital-smoke-strike": {
+        "id": "orbital-smoke-strike",
+        "name": "Orbital Smoke Strike",
+        "wiki_file_name": "Orbital Smoke Strike Stratagem Icon.png",
+        "parent_dirs": "stratagems/bridge",
+        "file_extension": "png",
+        "department": "Bridge"
+    },
+    "emg101-hmg-emplacement": {
+        "id": "emg101-hmg-emplacement",
+        "name": "E/MG-101 HMG Emplacement",
+        "wiki_file_name": "HMG Emplacement Stratagem Icon.png",
+        "parent_dirs": "stratagems/bridge",
+        "file_extension": "png",
+        "department": "Bridge"
+    },
+    "fx12-sheild-generator-relay": {
+        "id": "fx12-sheild-generator-relay",
+        "name": "FX-12 Sheild Generator Relay",
+        "wiki_file_name": "Shield Generator Relay Stratagem Icon.png",
+        "parent_dirs": "stratagems/bridge",
+        "file_extension": "png",
+        "department": "Bridge"
+    },
+    "aarc3-tesla-tower": {
+        "id": "aarc3-tesla-tower",
+        "name": "A/ARC-3 Tesla Tower",
+        "wiki_file_name": "Tesla Tower Stratagem Icon.png",
+        "parent_dirs": "stratagems/bridge",
+        "file_extension": "png",
+        "department": "Bridge"
+    },
+    "md6-anti-personnel-minefield": {
+        "id": "md6-anti-personnel-minefield",
+        "name": "MD-6 Anti-Personnel Minefield",
+        "wiki_file_name": "Anti-Personnel Minefield Stratagem Icon.png",
+        "parent_dirs": "stratagems/engineering-bay",
+        "file_extension": "png",
+        "department": "Engineering Bay"
+    },
+    "b1-supply-pack": {
+        "id": "b1-supply-pack",
+        "name": "B-1 Supply Pack",
+        "wiki_file_name": "Supply Pack Stratagem Icon.png",
+        "parent_dirs": "stratagems/engineering-bay",
+        "file_extension": "png",
+        "department": "Engineering Bay"
+    },
+    "gl21-grenade-launcher": {
+        "id": "gl21-grenade-launcher",
+        "name": "GL-21 Grenade Launcher",
+        "wiki_file_name": "Grenade Launcher Stratagem Icon.png",
+        "parent_dirs": "stratagems/engineering-bay",
+        "file_extension": "png",
+        "department": "Engineering Bay"
+    },
+    "las98-laser-cannon": {
+        "id": "las98-laser-cannon",
+        "name": "LAS-98 Laser Cannon",
+        "wiki_file_name": "Laser Cannon Stratagem Icon.png",
+        "parent_dirs": "stratagems/engineering-bay",
+        "file_extension": "png",
+        "department": "Engineering Bay"
+    },
+    "md14-incendiary-mines": {
+        "id": "md14-incendiary-mines",
+        "name": "MD-14 Incendiary Mines",
+        "wiki_file_name": "Incendiary Mines Stratagem Icon.png",
+        "parent_dirs": "stratagems/engineering-bay",
+        "file_extension": "png",
+        "department": "Engineering Bay"
+    },
+    "axlas5-guard-dog-rover": {
+        "id": "axlas5-guard-dog-rover",
+        "name": "AX/LAS-5 \"Guard Dog\" Rover",
+        "wiki_file_name": "Guard Dog Rover Stratagem Icon.png",
+        "parent_dirs": "stratagems/engineering-bay",
+        "file_extension": "png",
+        "department": "Engineering Bay"
+    },
+    "sh20-ballistic-shield-backpack": {
+        "id": "sh20-ballistic-shield-backpack",
+        "name": "SH-20 Ballistic Shield Backpack",
+        "wiki_file_name": "Ballistic Shield Backpack Stratagem Icon.png",
+        "parent_dirs": "stratagems/engineering-bay",
+        "file_extension": "png",
+        "department": "Engineering Bay"
+    },
+    "arc3-arc-thrower": {
+        "id": "arc3-arc-thrower",
+        "name": "ARC-3 Arc Thrower",
+        "wiki_file_name": "Arc Thrower Stratagem Icon.png",
+        "parent_dirs": "stratagems/engineering-bay",
+        "file_extension": "png",
+        "department": "Engineering Bay"
+    },
+    "md17-anti-tank-mines": {
+        "id": "md17-anti-tank-mines",
+        "name": "MD-17 Anti-Tank Mines",
+        "wiki_file_name": "MD-17 Anti-Tank Mines Stratagem Icon.png",
+        "parent_dirs": "stratagems/engineering-bay",
+        "file_extension": "png",
+        "department": "Engineering Bay"
+    },
+    "las99-quasar-cannon": {
+        "id": "las99-quasar-cannon",
+        "name": "LAS-99 Quasar Cannon",
+        "wiki_file_name": "Quasar Cannon Stratagem Icon.png",
+        "parent_dirs": "stratagems/engineering-bay",
+        "file_extension": "png",
+        "department": "Engineering Bay"
+    },
+    "sh32-shield-generator-pack": {
+        "id": "sh32-shield-generator-pack",
+        "name": "SH-32 Shield Generator Pack",
+        "wiki_file_name": "Shield Generator Pack Stratagem Icon.png",
+        "parent_dirs": "stratagems/engineering-bay",
+        "file_extension": "png",
+        "department": "Engineering Bay"
+    },
+    "amg43-machine-gun-sentry": {
+        "id": "amg43-machine-gun-sentry",
+        "name": "A/MG-43 Machine Gun Sentry",
+        "wiki_file_name": "Machine Gun Sentry Stratagem Icon.png",
+        "parent_dirs": "stratagems/robotics-workshop",
+        "file_extension": "png",
+        "department": "Robotics Workshop"
+    },
+    "ag16-gatling-sentry": {
+        "id": "ag16-gatling-sentry",
+        "name": "A/G-16 Gatling Sentry",
+        "wiki_file_name": "Gatling Sentry Stratagem Icon.png",
+        "parent_dirs": "stratagems/robotics-workshop",
+        "file_extension": "png",
+        "department": "Robotics Workshop"
+    },
+    "am12-mortar-sentry": {
+        "id": "am12-mortar-sentry",
+        "name": "A/M-12 Mortar Sentry",
+        "wiki_file_name": "Mortar Sentry Stratagem Icon.png",
+        "parent_dirs": "stratagems/robotics-workshop",
+        "file_extension": "png",
+        "department": "Robotics Workshop"
+    },
+    "axar23-guard-dog": {
+        "id": "axar23-guard-dog",
+        "name": "AX/AR-23 \"Guard Dog\"",
+        "wiki_file_name": "Guard Dog Stratagem Icon.png",
+        "parent_dirs": "stratagems/robotics-workshop",
+        "file_extension": "png",
+        "department": "Robotics Workshop"
+    },
+    "aac8-autocannon-sentry": {
+        "id": "aac8-autocannon-sentry",
+        "name": "A/AC-8 Autocannon Sentry",
+        "wiki_file_name": "Autocannon Sentry Stratagem Icon.png",
+        "parent_dirs": "stratagems/robotics-workshop",
+        "file_extension": "png",
+        "department": "Robotics Workshop"
+    },
+    "amls4x-rocket-sentry": {
+        "id": "amls4x-rocket-sentry",
+        "name": "A/MLS-4x Rocket Sentry",
+        "wiki_file_name": "Rocket Sentry Stratagem Icon.png",
+        "parent_dirs": "stratagems/robotics-workshop",
+        "file_extension": "png",
+        "department": "Robotics Workshop"
+    },
+    "exo45-patriot-exosuit": {
+        "id": "exo45-patriot-exosuit",
+        "name": "EXO-45 Patriot Exosuit",
+        "wiki_file_name": "EXO-45 Patriot Exosuit Stratagem Icon.png",
+        "parent_dirs": "stratagems/robotics-workshop",
+        "file_extension": "png",
+        "department": "Robotics Workshop"
+    },
+    "exo49-emancipator-exosuit": {
+        "id": "exo49-emancipator-exosuit",
+        "name": "EXO-49 Emancipator Exosuit",
+        "wiki_file_name": "EXO-49 Emancipator Exosuit Stratagem Icon.png",
+        "parent_dirs": "stratagems/robotics-workshop",
+        "file_extension": "png",
+        "department": "Robotics Workshop"
+    },
+    "tx41-sterilizer": {
+        "id": "tx41-sterilizer",
+        "name": "TX-41 Sterilizer",
+        "wiki_file_name": "Sterilizer Stratagem Icon.png",
+        "parent_dirs": "stratagems/warbonds",
+        "file_extension": "png",
+        "department": "Warbonds"
+    },
+    "axtx13-guard-dog-dog-breath": {
+        "id": "axtx13-guard-dog-dog-breath",
+        "name": "AX/TX-13 \"Guard Dog\" Dog Breath",
+        "wiki_file_name": "Guard Dog Dog Breath Stratagem Icon.png",
+        "parent_dirs": "stratagems/warbonds",
+        "file_extension": "png",
+        "department": "Warbonds"
+    },
+    "sh51-directional-shield": {
+        "id": "sh51-directional-shield",
+        "name": "SH-51 Directional Shield",
+        "wiki_file_name": "SH-51 Directional Shield Stratagem Icon.png",
+        "parent_dirs": "stratagems/warbonds",
+        "file_extension": "png",
+        "department": "Warbonds"
+    },
+    "eat12-anti-tank-emplacement": {
+        "id": "eat12-anti-tank-emplacement",
+        "name": "E/AT-12 Anti-Tank Emplacement",
+        "wiki_file_name": "E AT-12 Anti-Tank Emplacement Stratagem Icon.png",
+        "parent_dirs": "stratagems/warbonds",
+        "file_extension": "png",
+        "department": "Warbonds"
+    },
+    "aflam40-flame-sentry": {
+        "id": "aflam40-flame-sentry",
+        "name": "A/FLAm-40 Flame Sentry",
+        "wiki_file_name": "A FLAM-40 Flame Sentry Stratagem Icon.png",
+        "parent_dirs": "stratagems/warbonds",
+        "file_extension": "png",
+        "department": "Warbonds"
+    },
+    "b100-portable-hellbomb": {
+        "id": "b100-portable-hellbomb",
+        "name": "B-100 Portable Hellbomb",
+        "wiki_file_name": "Portable Hellbomb Stratagem Icon.png",
+        "parent_dirs": "stratagems/warbonds",
+        "file_extension": "png",
+        "department": "Warbonds"
+    }
+}

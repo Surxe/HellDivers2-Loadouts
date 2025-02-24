@@ -1,0 +1,533 @@
+{
+    "ar23-liberator": {
+        "id": "ar23-liberator",
+        "name": "AR-23 Liberator",
+        "wiki_file_name": "AR-23 Liberator Primary Weaponry.png",
+        "parent_dirs": "weapons/primary/assault-rifle",
+        "file_extension": "png",
+        "slot": "Primary",
+        "category": "Assault Rifle"
+    },
+    "ar23p-liberator-penetrator": {
+        "id": "ar23p-liberator-penetrator",
+        "name": "AR-23P Liberator Penetrator",
+        "wiki_file_name": "AR-23P Liberator Penetrator Primary Weaponry.png",
+        "parent_dirs": "weapons/primary/assault-rifle",
+        "file_extension": "png",
+        "slot": "Primary",
+        "category": "Assault Rifle"
+    },
+    "ar23c-liberator-concussive": {
+        "id": "ar23c-liberator-concussive",
+        "name": "AR-23C Liberator Concussive",
+        "wiki_file_name": "AR-23C Liberator Concussive Primary Weaponry.png",
+        "parent_dirs": "weapons/primary/assault-rifle",
+        "file_extension": "png",
+        "slot": "Primary",
+        "category": "Assault Rifle"
+    },
+    "sta-52-assault-rifle": {
+        "id": "sta-52-assault-rifle",
+        "name": "StA-52 Assault Rifle",
+        "wiki_file_name": "StA-52 Assault Rifle Primary Weaponry.png",
+        "parent_dirs": "weapons/primary/assault-rifle",
+        "file_extension": "png",
+        "slot": "Primary",
+        "category": "Assault Rifle"
+    },
+    "ar23a-liberator-carbine": {
+        "id": "ar23a-liberator-carbine",
+        "name": "AR-23A Liberator Carbine",
+        "wiki_file_name": "AR-23A Liberator Carbine Primary Weaponry.png",
+        "parent_dirs": "weapons/primary/assault-rifle",
+        "file_extension": "png",
+        "slot": "Primary",
+        "category": "Assault Rifle"
+    },
+    "ar61-tenderizer": {
+        "id": "ar61-tenderizer",
+        "name": "AR-61 Tenderizer",
+        "wiki_file_name": "AR-61 Tenderizer Primary Weaponry.png",
+        "parent_dirs": "weapons/primary/assault-rifle",
+        "file_extension": "png",
+        "slot": "Primary",
+        "category": "Assault Rifle"
+    },
+    "br14-adjudicator": {
+        "id": "br14-adjudicator",
+        "name": "BR-14 Adjudicator",
+        "wiki_file_name": "BR-14 Adjudicator Primary Weaponry.png",
+        "parent_dirs": "weapons/primary/assault-rifle",
+        "file_extension": "png",
+        "slot": "Primary",
+        "category": "Assault Rifle"
+    },
+    "r2124-constitution": {
+        "id": "r2124-constitution",
+        "name": "R-2124 Constitution",
+        "wiki_file_name": "R-2124 Constitution Primary Weaponry.png",
+        "parent_dirs": "weapons/primary/marksman-rifle",
+        "file_extension": "png",
+        "slot": "Primary",
+        "category": "Marksman Rifle"
+    },
+    "r63-diligence": {
+        "id": "r63-diligence",
+        "name": "R-63 Diligence",
+        "wiki_file_name": "R-63 Diligence Primary Weaponry.png",
+        "parent_dirs": "weapons/primary/marksman-rifle",
+        "file_extension": "png",
+        "slot": "Primary",
+        "category": "Marksman Rifle"
+    },
+    "r63cs-diligence-counter-sniper": {
+        "id": "r63cs-diligence-counter-sniper",
+        "name": "R-63CS Diligence Counter Sniper",
+        "wiki_file_name": "R-63CS Diligence Counter Sniper Primary Weaponry.png",
+        "parent_dirs": "weapons/primary/marksman-rifle",
+        "file_extension": "png",
+        "slot": "Primary",
+        "category": "Marksman Rifle"
+    },
+    "plas39-accelerator-rifle": {
+        "id": "plas39-accelerator-rifle",
+        "name": "PLAS-39 Accelerator Rifle",
+        "wiki_file_name": "PLAS-39 Accelerator Rifle Primary Weaponry.png",
+        "parent_dirs": "weapons/primary/sniper-rifle",
+        "file_extension": "png",
+        "slot": "Primary",
+        "category": "Sniper Rifle"
+    },
+    "mp98-knight": {
+        "id": "mp98-knight",
+        "name": "MP-98 Knight",
+        "wiki_file_name": "MP-98 Knight Primary Weaponry.png",
+        "parent_dirs": "weapons/primary/submachine-gun",
+        "file_extension": "png",
+        "slot": "Primary",
+        "category": "Submachine Gun"
+    },
+    "sta-11-smg": {
+        "id": "sta-11-smg",
+        "name": "StA-11 SMG",
+        "wiki_file_name": "StA-11 SMG Primary Weaponry.png",
+        "parent_dirs": "weapons/primary/submachine-gun",
+        "file_extension": "png",
+        "slot": "Primary",
+        "category": "Submachine Gun"
+    },
+    "smg32-reprimand": {
+        "id": "smg32-reprimand",
+        "name": "SMG-32 Reprimand",
+        "wiki_file_name": "SMG-32 Reprimand Primary Weaponry.png",
+        "parent_dirs": "weapons/primary/submachine-gun",
+        "file_extension": "png",
+        "slot": "Primary",
+        "category": "Submachine Gun"
+    },
+    "smg37-defender": {
+        "id": "smg37-defender",
+        "name": "SMG-37 Defender",
+        "wiki_file_name": "SMG-37 Defender Primary Weaponry.png",
+        "parent_dirs": "weapons/primary/submachine-gun",
+        "file_extension": "png",
+        "slot": "Primary",
+        "category": "Submachine Gun"
+    },
+    "smg72-pummeler": {
+        "id": "smg72-pummeler",
+        "name": "SMG-72 Pummeler",
+        "wiki_file_name": "SMG-72 Pummeler Primary Weaponry.png",
+        "parent_dirs": "weapons/primary/submachine-gun",
+        "file_extension": "png",
+        "slot": "Primary",
+        "category": "Submachine Gun"
+    },
+    "sg8-punisher": {
+        "id": "sg8-punisher",
+        "name": "SG-8 Punisher",
+        "wiki_file_name": "SG-8 Punisher Primary Weaponry.png",
+        "parent_dirs": "weapons/primary/shotgun",
+        "file_extension": "png",
+        "slot": "Primary",
+        "category": "Shotgun"
+    },
+    "sg8s-slugger": {
+        "id": "sg8s-slugger",
+        "name": "SG-8S Slugger",
+        "wiki_file_name": "SG-8S Slugger Primary Weaponry.png",
+        "parent_dirs": "weapons/primary/shotgun",
+        "file_extension": "png",
+        "slot": "Primary",
+        "category": "Shotgun"
+    },
+    "sg20-halt": {
+        "id": "sg20-halt",
+        "name": "SG-20 Halt",
+        "wiki_file_name": "SG-20 Halt Primary Weaponry.png",
+        "parent_dirs": "weapons/primary/shotgun",
+        "file_extension": "png",
+        "slot": "Primary",
+        "category": "Shotgun"
+    },
+    "sg451-cookout": {
+        "id": "sg451-cookout",
+        "name": "SG-451 Cookout",
+        "wiki_file_name": "SG-451 Cookout Primary Weaponry.png",
+        "parent_dirs": "weapons/primary/shotgun",
+        "file_extension": "png",
+        "slot": "Primary",
+        "category": "Shotgun"
+    },
+    "sg225-breaker": {
+        "id": "sg225-breaker",
+        "name": "SG-225 Breaker",
+        "wiki_file_name": "SG-225 Breaker Primary Weaponry.png",
+        "parent_dirs": "weapons/primary/shotgun",
+        "file_extension": "png",
+        "slot": "Primary",
+        "category": "Shotgun"
+    },
+    "sg225sp-breaker-spray-pray": {
+        "id": "sg225sp-breaker-spray-pray",
+        "name": "SG-225SP Breaker Spray&Pray",
+        "wiki_file_name": "SG-225SP Breaker Spray&Pray Primary Weaponry.png",
+        "parent_dirs": "weapons/primary/shotgun",
+        "file_extension": "png",
+        "slot": "Primary",
+        "category": "Shotgun"
+    },
+    "sg225ie-breaker-incendiary": {
+        "id": "sg225ie-breaker-incendiary",
+        "name": "SG-225IE Breaker Incendiary",
+        "wiki_file_name": "SG-225IE Breaker Incendiary Primary Weaponry.png",
+        "parent_dirs": "weapons/primary/shotgun",
+        "file_extension": "png",
+        "slot": "Primary",
+        "category": "Shotgun"
+    },
+    "cb9-exploding-crossbow": {
+        "id": "cb9-exploding-crossbow",
+        "name": "CB-9 Exploding Crossbow",
+        "wiki_file_name": "CB-9 Exploding Crossbow Primary Weaponry.png",
+        "parent_dirs": "weapons/primary/explosive",
+        "file_extension": "png",
+        "slot": "Primary",
+        "category": "Explosive"
+    },
+    "r36-eruptor": {
+        "id": "r36-eruptor",
+        "name": "R-36 Eruptor",
+        "wiki_file_name": "R-36 Eruptor Primary Weaponry.png",
+        "parent_dirs": "weapons/primary/explosive",
+        "file_extension": "png",
+        "slot": "Primary",
+        "category": "Explosive"
+    },
+    "sg8p-punisher-plasma": {
+        "id": "sg8p-punisher-plasma",
+        "name": "SG-8P Punisher Plasma",
+        "wiki_file_name": "SG-8P Punisher Plasma Primary Weaponry.png",
+        "parent_dirs": "weapons/primary/energy-based",
+        "file_extension": "png",
+        "slot": "Primary",
+        "category": "Energy-Based"
+    },
+    "arc12-blitzer": {
+        "id": "arc12-blitzer",
+        "name": "ARC-12 Blitzer",
+        "wiki_file_name": "ARC-12 Blitzer Primary Weaponry.png",
+        "parent_dirs": "weapons/primary/energy-based",
+        "file_extension": "png",
+        "slot": "Primary",
+        "category": "Energy-Based"
+    },
+    "las5-scythe": {
+        "id": "las5-scythe",
+        "name": "LAS-5 Scythe",
+        "wiki_file_name": "LAS-5 Scythe Primary Weaponry.png",
+        "parent_dirs": "weapons/primary/energy-based",
+        "file_extension": "png",
+        "slot": "Primary",
+        "category": "Energy-Based"
+    },
+    "las16-sickle": {
+        "id": "las16-sickle",
+        "name": "LAS-16 Sickle",
+        "wiki_file_name": "LAS-16 Sickle Primary Weaponry.png",
+        "parent_dirs": "weapons/primary/energy-based",
+        "file_extension": "png",
+        "slot": "Primary",
+        "category": "Energy-Based"
+    },
+    "las17-double-edge-sickle": {
+        "id": "las17-double-edge-sickle",
+        "name": "LAS-17 Double-Edge Sickle",
+        "wiki_file_name": "LAS-17 Double-Edge Sickle Primary Weaponry.png",
+        "parent_dirs": "weapons/primary/energy-based",
+        "file_extension": "png",
+        "slot": "Primary",
+        "category": "Energy-Based"
+    },
+    "plas1-scorcher": {
+        "id": "plas1-scorcher",
+        "name": "PLAS-1 Scorcher",
+        "wiki_file_name": "PLAS-1 Scorcher Primary Weaponry.png",
+        "parent_dirs": "weapons/primary/energy-based",
+        "file_extension": "png",
+        "slot": "Primary",
+        "category": "Energy-Based"
+    },
+    "plas101-purifier": {
+        "id": "plas101-purifier",
+        "name": "PLAS-101 Purifier",
+        "wiki_file_name": "PLAS-101 Purifier Primary Weaponry.png",
+        "parent_dirs": "weapons/primary/energy-based",
+        "file_extension": "png",
+        "slot": "Primary",
+        "category": "Energy-Based"
+    },
+    "flam66-torcher": {
+        "id": "flam66-torcher",
+        "name": "FLAM-66 Torcher",
+        "wiki_file_name": "FLAM-66 Torcher Primary Weaponry.png",
+        "parent_dirs": "weapons/primary/special",
+        "file_extension": "png",
+        "slot": "Primary",
+        "category": "Special"
+    },
+    "jar5-dominator": {
+        "id": "jar5-dominator",
+        "name": "JAR-5 Dominator",
+        "wiki_file_name": "JAR-5 Dominator Primary Weaponry.png",
+        "parent_dirs": "weapons/primary/special",
+        "file_extension": "png",
+        "slot": "Primary",
+        "category": "Special"
+    },
+    "p2-peacemaker": {
+        "id": "p2-peacemaker",
+        "name": "P-2 Peacemaker",
+        "wiki_file_name": "P-2 Peacemaker Secondary Weaponry.png",
+        "parent_dirs": "weapons/secondary/pistol",
+        "file_extension": "png",
+        "slot": "Secondary",
+        "category": "Pistol"
+    },
+    "p19-redeemer": {
+        "id": "p19-redeemer",
+        "name": "P-19 Redeemer",
+        "wiki_file_name": "P-19 Redeemer Secondary Weaponry.png",
+        "parent_dirs": "weapons/secondary/pistol",
+        "file_extension": "png",
+        "slot": "Secondary",
+        "category": "Pistol"
+    },
+    "p113-verdict": {
+        "id": "p113-verdict",
+        "name": "P-113 Verdict",
+        "wiki_file_name": "P-113 Verdict Secondary Weaponry.png",
+        "parent_dirs": "weapons/secondary/pistol",
+        "file_extension": "png",
+        "slot": "Secondary",
+        "category": "Pistol"
+    },
+    "p4-senator": {
+        "id": "p4-senator",
+        "name": "P-4 Senator",
+        "wiki_file_name": "P-4 Senator Secondary Weaponry.png",
+        "parent_dirs": "weapons/secondary/pistol",
+        "file_extension": "png",
+        "slot": "Secondary",
+        "category": "Pistol"
+    },
+    "cqc19-stun-lance": {
+        "id": "cqc19-stun-lance",
+        "name": "CQC-19 Stun Lance",
+        "wiki_file_name": "CQC-19 Stun Lance Secondary Weaponry.png",
+        "parent_dirs": "weapons/secondary/melee",
+        "file_extension": "png",
+        "slot": "Secondary",
+        "category": "Melee"
+    },
+    "cqc30-stun-baton": {
+        "id": "cqc30-stun-baton",
+        "name": "CQC-30 Stun Baton",
+        "wiki_file_name": "CQC-30 Stun Baton Secondary Weaponry.png",
+        "parent_dirs": "weapons/secondary/melee",
+        "file_extension": "png",
+        "slot": "Secondary",
+        "category": "Melee"
+    },
+    "cqc5-combat-hatchet": {
+        "id": "cqc5-combat-hatchet",
+        "name": "CQC-5 Combat Hatchet",
+        "wiki_file_name": "CQC-5 Combat Hatchet Secondary Weaponry.png",
+        "parent_dirs": "weapons/secondary/melee",
+        "file_extension": "png",
+        "slot": "Secondary",
+        "category": "Melee"
+    },
+    "p11-stim-pistol": {
+        "id": "p11-stim-pistol",
+        "name": "P-11 Stim Pistol",
+        "wiki_file_name": "P-11 Stim Pistol Secondary Weaponry.png",
+        "parent_dirs": "weapons/secondary/special",
+        "file_extension": "png",
+        "slot": "Secondary",
+        "category": "Special"
+    },
+    "sg22-bushwhacker": {
+        "id": "sg22-bushwhacker",
+        "name": "SG-22 Bushwhacker",
+        "wiki_file_name": "SG-22 Bushwhacker Secondary Weaponry.png",
+        "parent_dirs": "weapons/secondary/special",
+        "file_extension": "png",
+        "slot": "Secondary",
+        "category": "Special"
+    },
+    "p72-crisper": {
+        "id": "p72-crisper",
+        "name": "P-72 Crisper",
+        "wiki_file_name": "P-72 Crisper Secondary Weaponry.png",
+        "parent_dirs": "weapons/secondary/special",
+        "file_extension": "png",
+        "slot": "Secondary",
+        "category": "Special"
+    },
+    "gp31-grenade-pistol": {
+        "id": "gp31-grenade-pistol",
+        "name": "GP-31 Grenade Pistol",
+        "wiki_file_name": "GP-31 Grenade Pistol Secondary Weaponry.png",
+        "parent_dirs": "weapons/secondary/special",
+        "file_extension": "png",
+        "slot": "Secondary",
+        "category": "Special"
+    },
+    "las7-dagger": {
+        "id": "las7-dagger",
+        "name": "LAS-7 Dagger",
+        "wiki_file_name": "LAS-7 Dagger Secondary Weaponry.png",
+        "parent_dirs": "weapons/secondary/special",
+        "file_extension": "png",
+        "slot": "Secondary",
+        "category": "Special"
+    },
+    "gp31-ultimatum": {
+        "id": "gp31-ultimatum",
+        "name": "GP-31 Ultimatum",
+        "wiki_file_name": "GP-31 Ultimatum Secondary Weaponry.png",
+        "parent_dirs": "weapons/secondary/special",
+        "file_extension": "png",
+        "slot": "Secondary",
+        "category": "Special"
+    },
+    "plas15-loyalist": {
+        "id": "plas15-loyalist",
+        "name": "PLAS-15 Loyalist",
+        "wiki_file_name": "PLAS-15 Loyalist Secondary Weaponry.png",
+        "parent_dirs": "weapons/secondary/special",
+        "file_extension": "png",
+        "slot": "Secondary",
+        "category": "Special"
+    },
+    "g6-frag": {
+        "id": "g6-frag",
+        "name": "G-6 Frag",
+        "wiki_file_name": "G-6 Frag Throwable Weaponry.png",
+        "parent_dirs": "weapons/throwable/standard",
+        "file_extension": "png",
+        "slot": "Throwable",
+        "category": "Standard"
+    },
+    "g12-high-explosive": {
+        "id": "g12-high-explosive",
+        "name": "G-12 High Explosive",
+        "wiki_file_name": "G-12 High Explosive Throwable Weaponry.png",
+        "parent_dirs": "weapons/throwable/standard",
+        "file_extension": "png",
+        "slot": "Throwable",
+        "category": "Standard"
+    },
+    "g10-incendiary": {
+        "id": "g10-incendiary",
+        "name": "G-10 Incendiary",
+        "wiki_file_name": "G-10 Incendiary Throwable Weaponry.png",
+        "parent_dirs": "weapons/throwable/standard",
+        "file_extension": "png",
+        "slot": "Throwable",
+        "category": "Standard"
+    },
+    "g16-impact": {
+        "id": "g16-impact",
+        "name": "G-16 Impact",
+        "wiki_file_name": "G-16 Impact Throwable Weaponry.png",
+        "parent_dirs": "weapons/throwable/special",
+        "file_extension": "png",
+        "slot": "Throwable",
+        "category": "Special"
+    },
+    "g13-incendiary-impact": {
+        "id": "g13-incendiary-impact",
+        "name": "G-13 Incendiary Impact",
+        "wiki_file_name": "G-13 Incendiary Impact Throwable Weaponry.png",
+        "parent_dirs": "weapons/throwable/special",
+        "file_extension": "png",
+        "slot": "Throwable",
+        "category": "Special"
+    },
+    "g23-stun": {
+        "id": "g23-stun",
+        "name": "G-23 Stun",
+        "wiki_file_name": "G-23 Stun Throwable Weaponry.png",
+        "parent_dirs": "weapons/throwable/special",
+        "file_extension": "png",
+        "slot": "Throwable",
+        "category": "Special"
+    },
+    "g4-gas": {
+        "id": "g4-gas",
+        "name": "G-4 Gas",
+        "wiki_file_name": "G-4 Gas Throwable Weaponry.png",
+        "parent_dirs": "weapons/throwable/special",
+        "file_extension": "png",
+        "slot": "Throwable",
+        "category": "Special"
+    },
+    "g50-seeker": {
+        "id": "g50-seeker",
+        "name": "G-50 Seeker",
+        "wiki_file_name": "G-50 Seeker Throwable Weaponry.png",
+        "parent_dirs": "weapons/throwable/special",
+        "file_extension": "png",
+        "slot": "Throwable",
+        "category": "Special"
+    },
+    "g3-smoke": {
+        "id": "g3-smoke",
+        "name": "G-3 Smoke",
+        "wiki_file_name": "G-3 Smoke Throwable Weaponry.png",
+        "parent_dirs": "weapons/throwable/special",
+        "file_extension": "png",
+        "slot": "Throwable",
+        "category": "Special"
+    },
+    "g123-thermite": {
+        "id": "g123-thermite",
+        "name": "G-123 Thermite",
+        "wiki_file_name": "G-123 Thermite Throwable Weaponry.png",
+        "parent_dirs": "weapons/throwable/special",
+        "file_extension": "png",
+        "slot": "Throwable",
+        "category": "Special"
+    },
+    "k2-throwing-knife": {
+        "id": "k2-throwing-knife",
+        "name": "K-2 Throwing Knife",
+        "wiki_file_name": "K-2 Throwing Knife Throwable Weaponry.png",
+        "parent_dirs": "weapons/throwable/special",
+        "file_extension": "png",
+        "slot": "Throwable",
+        "category": "Special"
+    }
+}
