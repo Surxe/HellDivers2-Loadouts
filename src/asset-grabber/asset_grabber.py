@@ -46,7 +46,7 @@ class AssetGrabber:
         # Save image to file
         if response.status_code == 200:
             # Ensure dir exists
-            dir = os.path.join("src/assets/", equipment_obj.parent_dirs)
+            dir = os.path.join("src/builder/static/assets", equipment_obj.parent_dirs)
             if not os.path.exists(dir):
                 os.makedirs(dir)
 

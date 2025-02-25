@@ -19,7 +19,7 @@ class Equipment:
         self.file_extension = file_extension
 
     def asset_exists(self):
-        path = os.path.join("src/assets", self.parent_dirs, f"{self.id}.{self.file_extension}")
+        path = os.path.join("src/builder/static/assets", self.parent_dirs, f"{self.id}.{self.file_extension}")
         return os.path.exists(path)
     
     @classmethod
