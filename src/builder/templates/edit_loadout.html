@@ -7,5 +7,26 @@
 </head>
 <body>
     <h1>Editing Loadout: {{ loadout["Loadout_Name"] }}</h1>
+
+    <h3>Weapons</h3>
+    <ul>
+        {% for slot, weapon_name in loadout["Loadout"]["Weapons"].items() %}
+            <li>{{ slot }}: {{ weapon_name }}</li>
+        {% endfor %}
+    </ul>
+
+    <h3>Stratagems</h3>
+    <ul>
+        {% for i, stratagem_name in loadout["Loadout"]["Stratagems"].items() %}
+            <li>{{ i }}: {{ stratagem_name }}</li>
+        {% endfor %}
+    </ul>
+
+    <h3>Boosts</h3>
+    <ul>
+        {% for i, boost_name in loadout["Loadout"]["Boosts"].items() %}
+            <li>{{ i }}: {{ boost_name }}</li>
+        {% endfor %}
+    </ul>
 </body>
 </html>
