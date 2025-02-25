@@ -3,17 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
     <title>Edit Loadout</title>
 </head>
-<body>
+<body>  
     <h1>Editing Loadout: {{ loadout["Loadout_Name"] }}</h1>
 
     <h3>Weapons</h3>
-    <ul>
+    <div id="weapons" class="equipment-container">
         {% for slot, weapon_name in loadout["Loadout"]["Weapons"].items() %}
-            <li>{{ slot }}: {{ weapon_name }}</li>
+        <div class="equipment-item">
+            <p>{{ slot }}: {{ weapon_name }}</p>
+            <div class="square"></div>
+        </div>
         {% endfor %}
-    </ul>
+    </div>
 
     <h3>Stratagems</h3>
     <ul>
