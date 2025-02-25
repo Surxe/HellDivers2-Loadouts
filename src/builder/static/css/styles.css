@@ -1,12 +1,25 @@
-.square {
-    width: 100px;
-    height: 100px;
+.equipment-slot {
     box-shadow: 0 0 0 3px rgb(108, 108, 108);
     background-color: rgb(46, 46, 46);
     transition: box-shadow 0.2s ease-in-out;
 }
 
-.square:hover {
+.weapon-slot {
+    width: 135px;
+    height: 100px;
+}
+
+.stratagem-slot {
+    width: 100px;
+    height: 100px;
+}
+
+.boost-slot {
+    width: 100px;
+    height: 100px;
+}
+
+.equipment-slot:hover {
     box-shadow: 0 0 0 3px rgb(249, 249, 11)
 }
 
