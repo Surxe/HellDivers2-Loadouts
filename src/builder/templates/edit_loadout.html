@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/site.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
     <title>Edit Loadout</title>
 </head>
@@ -20,17 +21,23 @@
     </div>
 
     <h3>Stratagems</h3>
-    <ul>
+    <div id="stratagems" class="equipment-container">
         {% for i, stratagem_name in loadout["Loadout"]["Stratagems"].items() %}
-            <li>{{ i }}: {{ stratagem_name }}</li>
+        <div class="equipment-item">
+            <p>{{ i }}: {{ stratagem_name }}</p>
+            <div class="square"></div>
+        </div>
         {% endfor %}
-    </ul>
+    </div>
 
     <h3>Boosts</h3>
-    <ul>
+    <div id="boosts" class="equipment-container">
         {% for i, boost_name in loadout["Loadout"]["Boosts"].items() %}
-            <li>{{ i }}: {{ boost_name }}</li>
+        <div class="equipment-item">
+            <p>{{ i }}: {{ boost_name }}</p>
+            <div class="square"></div>
+        </div>
         {% endfor %}
-    </ul>
+    </div>
 </body>
 </html>

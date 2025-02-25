@@ -1,0 +1,12 @@
+body {
+    background-color: #121212;
+    color: white;
+}
+
+a {
+    color: #1E90FF
+}
+
+a:hover {
+    color: #87CEFA;
+}
