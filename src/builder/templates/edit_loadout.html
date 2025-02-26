@@ -46,7 +46,14 @@
         </div>
 
         <div class="equipment-options">
-            my area
+            <h3>Weapons</h3>
+            <div id="weapons-list" class="equipment-list equipment-container">
+                {% for id, weapon in equipment.Weapons.items() %}
+                <div class="equipment-slot">
+                    <img src="{{ url_for('static', filename=weapon.get_static_asset_path()) }}" width="135" height="100">
+                </div>
+                {% endfor %}
+            </div>
         </div>
     </div>
 </body>
