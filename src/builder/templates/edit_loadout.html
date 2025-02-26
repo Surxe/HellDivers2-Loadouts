@@ -10,36 +10,44 @@
 <body>  
     <h1>Editing Loadout: {{ loadout["Loadout_Name"] }}</h1>
 
-    <h3>Weapons</h3>
-    <div id="weapons" class="equipment-container">
-        {% for slot, weapon_name in loadout["Loadout"]["Weapons"].items() %}
-        <div class="equipment-item">
-            <p>{{ slot }}: {{ weapon_name }}</p>
-            <div class="equipment-slot weapon-slot"></div>
-        </div>
-        {% endfor %}
-    </div>
+    <div class="edit-loadout-body">
+        <div class="selected-equipment">
+            <h3>Weapons</h3>
+            <div id="weapons" class="equipment-container">
+                {% for slot, weapon_name in loadout["Loadout"]["Weapons"].items() %}
+                <div class="equipment-item">
+                    <p>{{ slot }}: {{ weapon_name }}</p>
+                    <div class="equipment-slot weapon-slot"></div>
+                </div>
+                {% endfor %}
+            </div>
 
-    <img src="{{ url_for('static', filename='assets/weapons/primary/assault-rifle/ar23-liberator.png') }}">
+            <img src="{{ url_for('static', filename='assets/weapons/primary/assault-rifle/ar23-liberator.png') }}" width="135" height="100">
 
-    <h3>Stratagems</h3>
-    <div id="stratagems" class="equipment-container">
-        {% for i, stratagem_name in loadout["Loadout"]["Stratagems"].items() %}
-        <div class="equipment-item">
-            <p>{{ i }}: {{ stratagem_name }}</p>
-            <div class="equipment-slot stratagem-slot"></div>
-        </div>
-        {% endfor %}
-    </div>
+            <h3>Stratagems</h3>
+            <div id="stratagems" class="equipment-container">
+                {% for i, stratagem_name in loadout["Loadout"]["Stratagems"].items() %}
+                <div class="equipment-item">
+                    <p>{{ i }}: {{ stratagem_name }}</p>
+                    <div class="equipment-slot stratagem-slot"></div>
+                </div>
+                {% endfor %}
+            </div>
 
-    <h3>Boosts</h3>
-    <div id="boosts" class="equipment-container">
-        {% for i, boost_name in loadout["Loadout"]["Boosts"].items() %}
-        <div class="equipment-item">
-            <p>{{ i }}: {{ boost_name }}</p>
-            <div class="equipment-slot boost-slot"></div>
+            <h3>Boosts</h3>
+            <div id="boosts" class="equipment-container">
+                {% for i, boost_name in loadout["Loadout"]["Boosts"].items() %}
+                <div class="equipment-item">
+                    <p>{{ i }}: {{ boost_name }}</p>
+                    <div class="equipment-slot boost-slot"></div>
+                </div>
+                {% endfor %}
+            </div>
         </div>
-        {% endfor %}
+
+        <div class="equipment-options">
+            my area
+        </div>
     </div>
 </body>
 </html>

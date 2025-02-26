@@ -37,3 +37,22 @@
     flex-direction: column;
     align-items: center;
 }
+
+.edit-loadout-body {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.selected-equipment, .equipment-options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    height: 100%;
+    flex: 1;
+}
+
+.equipment-options {
+    box-shadow: 0 0 0 3px rgb(108, 108, 108);
+}
