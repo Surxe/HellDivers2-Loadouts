@@ -24,6 +24,9 @@ loadouts_list_cache = []
 
 def get_loadouts():
     """Retrieve the list of existing loadouts."""
+    if not os.path.exists(loadouts_dir):
+        os.makedirs(loadouts_dir)
+
     for loadout_file_name in os.listdir(loadouts_dir):
         if loadout_file_name.endswith('.json'):
             with open(os.path.join(loadouts_dir, loadout_file_name), 'r') as file:
@@ -48,7 +51,7 @@ def home():
 def make_default_loadout_name(i=1):
     # Check if loadout{i} exists
     name = f'loadout{i}'
-    if name in any(loadout["name"] for loadout in loadouts_list_cache):
+    if any(name == loadout["name"] for loadout in loadouts_list_cache):
         return make_default_loadout_name(i+1)
     return name
 
