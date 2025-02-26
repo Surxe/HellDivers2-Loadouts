@@ -1,5 +1,5 @@
 .equipment-slot {
-    box-shadow: 0 0 0 3px rgb(108, 108, 108);
+    box-shadow: 0 0 0 2px rgb(108, 108, 108);
     background-color: rgb(46, 46, 46);
     transition: box-shadow 0.2s ease-in-out;
 }
@@ -20,7 +20,7 @@
 }
 
 .equipment-slot:hover {
-    box-shadow: 0 0 0 3px rgb(249, 249, 11)
+    box-shadow: 0 0 0 2px rgb(249, 249, 11)
 }
 
 .equipment-container {
@@ -30,6 +30,7 @@
     margin: 10px;
     padding: 10px;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 .equipment-item {
@@ -54,5 +55,5 @@
 }
 
 .equipment-options {
-    box-shadow: 0 0 0 3px rgb(108, 108, 108);
+    box-shadow: 0 0 0 2px rgb(108, 108, 108);
 }
