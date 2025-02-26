@@ -12,6 +12,9 @@ load_dotenv(os.path.join(os.path.dirname(os.path.abspath(__file__)), '../..', '.
 
 # Import local libraries
 from src.Loadout import Loadout
+from src.equipment.Weapon import Weapon
+from src.equipment.Stratagem import Stratagem
+from src.equipment.Boost import Boost
 
 app = Flask(__name__)
 from flask import Flask, render_template, request, redirect, url_for, jsonify
@@ -219,7 +222,17 @@ def edit_loadout():
     if not loadout_data:
         return "Error: Failed to load loadout data.", 400
     
-    return render_template('edit_loadout.html', loadout=loadout_data)
+    # Get the equipment data
+    weapons = Weapon.load()
+    stratagems = Stratagem.load()
+    boosts = Boost.load()
+    equipment = {
+        "Weapons": weapons,
+        "Stratagems": stratagems,
+        "Boosts": boosts
+    }
+    
+    return render_template('edit_loadout.html', loadout=loadout_data, equipment=equipment)
 
 if __name__ == '__main__':
     app.run(debug=True)
