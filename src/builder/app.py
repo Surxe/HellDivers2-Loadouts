@@ -9,6 +9,8 @@ from flask import Flask, render_template
 import json
 from dotenv import load_dotenv
 load_dotenv(os.path.join(os.path.dirname(os.path.abspath(__file__)), '../..', '.env'))
+from flask import Flask, render_template, request, redirect, url_for, jsonify
+from flask_caching import Cache
 
 # Import local libraries
 from src.Loadout import Loadout
@@ -17,7 +19,8 @@ from src.equipment.Stratagem import Stratagem
 from src.equipment.Boost import Boost
 
 app = Flask(__name__)
-from flask import Flask, render_template, request, redirect, url_for, jsonify
+
+cache = Cache(app, config={'CACHE_TYPE': 'simple'})
 
 # Define the absolute path to the 'loadouts' directory
 repo_path = os.getenv('REPOSITORY_PATH')  # Absolute path to the repository folder
@@ -207,6 +210,14 @@ def get_loadouts_api():
         return get_loadouts()
     return jsonify({"loadouts": loadouts_list_cache})
 
+@cache.cached(timeout=300, key_prefix='equipment_data')
+def get_equipment_data():
+    return {
+        "Weapons": Weapon.load(),
+        "Stratagems": Stratagem.load(),
+        "Boosts": Boost.load()
+    }
+
 @app.route('/edit_loadout')
 def edit_loadout():
     loadout_id = request.args.get('loadout_id')
@@ -223,14 +234,9 @@ def edit_loadout():
         return "Error: Failed to load loadout data.", 400
     
     # Get the equipment data
-    weapons = Weapon.load()
-    stratagems = Stratagem.load()
-    boosts = Boost.load()
-    equipment = {
-        "Weapons": weapons,
-        "Stratagems": stratagems,
-        "Boosts": boosts
-    }
+    equipment = get_equipment_data()
+    if not equipment:
+        return "Error: Failed to load equipment data.", 400
     
     return render_template('edit_loadout.html', loadout=loadout_data, equipment=equipment)
 
