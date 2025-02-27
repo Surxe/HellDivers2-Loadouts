@@ -238,7 +238,7 @@ def edit_loadout():
     if not equipment:
         return "Error: Failed to load equipment data.", 400
     
-    return render_template('edit_loadout.html', loadout=loadout_data, equipment=equipment)
+    return render_template('edit_loadout.html', loadout=loadout_data, weapon_class=Weapon, equipment=equipment)
 
 if __name__ == '__main__':
     app.run(debug=True)

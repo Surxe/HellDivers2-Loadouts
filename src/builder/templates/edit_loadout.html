@@ -49,20 +49,32 @@
 
             <div class="tab-container">
                 <div class="tab-buttons">
-                    <button class="btn tab-button" onclick="tabber_tab_clicked(event, 'tab1')">Tab 1</button>
-                    <button class="btn tab-button" onclick="tabber_tab_clicked(event, 'tab2')">Tab 2</button>
-                    <button class="btn tab-button" onclick="tabber_tab_clicked(event, 'tab3')">Tab 3</button>
+                    {% for slot in weapon_class.valid_slots %}
+                    <button class="btn tab-button tabber1" onclick="tabber_tab_clicked(event, '{{ slot }}', 'tabber1')">
+                        {{ slot }}
+                    </button>
+                    {% endfor %}
                 </div>
-            
-                <div class="tab-content" id="tab1">
-                    <p>Content for Tab 1</p>
+                
+                {% for slot in weapon_class.valid_slots %}
+                <div class="tab-content tabber1" id="{{ slot }}">
+                    <div class="tab-buttons">
+                        {% for category in weapon_class.valid_categories[slot] %}
+                        <button class="btn tab-button tabber2" onclick="tabber_tab_clicked(event, '{{ category }}', 'tabber2')">
+                            {{ category }}
+                        </button>
+                        {% endfor %}
+                    </div>
+
+                    {% for category in weapon_class.valid_categories[slot] %}
+                        <div class="tab-content tabber2" id="{{ category }}">
+                            {{ category }}
+                        </div>
+                    {% endfor %}
+
+                    
                 </div>
-                <div class="tab-content" id="tab2">
-                    <p>Content for Tab 2</p>
-                </div>
-                <div class="tab-content" id="tab3">
-                    <p>Content for Tab 3</p>
-                </div>
+                {% endfor %}
             </div>
             
 
