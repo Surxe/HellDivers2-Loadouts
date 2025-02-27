@@ -1,6 +1,11 @@
+:root {
+    --primary-color: white;
+    --primary-bg-color: #121212;
+}
+
 body {
-    background-color: #121212;
-    color: white;
+    color: var(--primary-color);
+    background-color: var(--primary-bg-color);
 }
 
 a {
@@ -9,4 +14,12 @@ a {
 
 a:hover {
     color: #87CEFA;
+}
+
+.btn {
+    background-color: rgb(159, 159, 159);
+}
+
+.btn:hover {
+    background-color: rgb(108, 108, 108);
 }
