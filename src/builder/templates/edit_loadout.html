@@ -45,7 +45,7 @@
 
         <div class="equipment-options">
             <h3>Weapons</h3>
-            <div id="weapons-list" class="equipment-list equipment-container">
+            <div id="weapons-list" class="equipment-container">
                 {% for id, weapon in equipment.Weapons.items() %}
                 <div class="equipment-slot">
                     <img src="{{ url_for('static', filename=weapon.get_static_asset_path()) }}" width="135" height="100">
