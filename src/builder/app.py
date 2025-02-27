@@ -212,10 +212,14 @@ def get_loadouts_api():
 
 @cache.cached(timeout=300, key_prefix='equipment_data')
 def get_equipment_data():
+    Weapon.load()
+    Stratagem.load()
+    Boost.load()
+
     return {
-        "Weapons": Weapon.load(),
-        "Stratagems": Stratagem.load(),
-        "Boosts": Boost.load()
+        "Weapons": Weapon.get_grouped_objs(),
+        "Stratagems": {},
+        "Boosts": {}
     }
 
 @app.route('/edit_loadout')

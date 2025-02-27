@@ -59,3 +59,23 @@ class Weapon(Equipment):
                     obj['file_extension']
                 )
         return cls.objs
+    
+    @classmethod
+    def get_grouped_objs(cls):
+        grouped_objs = {}
+
+        # Create a dictionary for each slot
+        for slot in cls.valid_slots:
+            grouped_objs[slot] = {}
+
+            # Create a dictionary for each category in the slot
+            for category in cls.valid_categories[slot]:
+                grouped_objs[slot][category] = {}
+
+        # Add each weapon to the dictionary
+        for id, weapon in cls.objs.items():
+            grouped_objs[weapon.slot][weapon.category][id] = weapon
+
+        return grouped_objs
+
+                

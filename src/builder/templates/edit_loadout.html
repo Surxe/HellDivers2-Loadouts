@@ -68,20 +68,15 @@
 
                     {% for category in weapon_class.valid_categories[slot] %}
                         <div class="tab-content tabber2" id="{{ category }}">
-                            {{ category }}
+                            <div class="equipment-container">
+                                {% for id, weapon in equipment.Weapons[slot][category].items() %}
+                                <div class="equipment-slot">
+                                    <img src="{{ url_for('static', filename=weapon.get_static_asset_path()) }}" width="135" height="100">
+                                </div>
+                                {% endfor %}
+                            </div>
                         </div>
                     {% endfor %}
-
-                    
-                </div>
-                {% endfor %}
-            </div>
-            
-
-            <div id="weapons-list" class="equipment-container">
-                {% for id, weapon in equipment.Weapons.items() %}
-                <div class="equipment-slot">
-                    <img src="{{ url_for('static', filename=weapon.get_static_asset_path()) }}" width="135" height="100">
                 </div>
                 {% endfor %}
             </div>
