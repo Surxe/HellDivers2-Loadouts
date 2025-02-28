@@ -46,3 +46,18 @@ class Stratagem(Equipment):
                     obj['file_extension']
                 )
         return cls.objs
+    
+    @classmethod
+    def get_grouped_objs(cls):
+        grouped_objs = {}
+
+        # Create a dictionary for each department
+        for department in cls.valid_departments:
+            grouped_objs[department] = {}
+
+        # Add each object to its respective department
+        for id, obj in cls.objs.items():
+            grouped_objs[obj.department][obj.id] = obj
+
+        print(grouped_objs)
+        return grouped_objs

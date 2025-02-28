@@ -217,9 +217,18 @@ def get_equipment_data():
     Boost.load()
 
     return {
-        "Weapons": Weapon.get_grouped_objs(),
-        "Stratagems": {},
-        "Boosts": {}
+        "Weapons": {
+            "class": Weapon,
+            "data": Weapon.get_grouped_objs()
+        },
+        "Stratagems": {
+            "class": Stratagem,
+            "data": Stratagem.get_grouped_objs()
+        },
+        "Boosts": {
+            "class": Boost,
+            "data": Boost.objs
+        }
     }
 
 @app.route('/edit_loadout')
@@ -242,7 +251,7 @@ def edit_loadout():
     if not equipment:
         return "Error: Failed to load equipment data.", 400
     
-    return render_template('edit_loadout.html', loadout=loadout_data, weapon_class=Weapon, equipment=equipment)
+    return render_template('edit_loadout.html', loadout=loadout_data, equipment=equipment)
 
 if __name__ == '__main__':
     app.run(debug=True)

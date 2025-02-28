@@ -46,30 +46,29 @@
 
         <div class="equipment-options">
             <h3>Weapons</h3>
-
             <div class="tab-container">
                 <div class="tab-buttons">
-                    {% for slot in weapon_class.valid_slots %}
-                    <button class="btn tab-button tabber1" onclick="tabber_tab_clicked(event, '{{ slot }}', 'tabber1')">
+                    {% for slot in equipment["Weapons"]["class"].valid_slots %}
+                    <button class="btn tab-button weapon-slots" onclick="tabber_tab_clicked(event, '{{ slot }}', 'weapon-slots')">
                         {{ slot }}
                     </button>
                     {% endfor %}
                 </div>
                 
-                {% for slot in weapon_class.valid_slots %}
-                <div class="tab-content tabber1" id="{{ slot }}">
+                {% for slot in equipment["Weapons"]["class"].valid_slots %}
+                <div class="tab-content weapon-slots" id="{{ slot }}">
                     <div class="tab-buttons">
-                        {% for category in weapon_class.valid_categories[slot] %}
-                        <button class="btn tab-button tabber2" onclick="tabber_tab_clicked(event, '{{ category }}', 'tabber2')">
+                        {% for category in equipment["Weapons"]["class"].valid_categories[slot] %}
+                        <button class="btn tab-button weapon-categories" onclick="tabber_tab_clicked(event, '{{ category }}', 'weapon-categories')">
                             {{ category }}
                         </button>
                         {% endfor %}
                     </div>
 
-                    {% for category in weapon_class.valid_categories[slot] %}
-                        <div class="tab-content tabber2" id="{{ category }}">
+                    {% for category in equipment["Weapons"]["class"].valid_categories[slot] %}
+                        <div class="tab-content weapon-categories" id="{{ category }}">
                             <div class="equipment-container">
-                                {% for id, weapon in equipment.Weapons[slot][category].items() %}
+                                {% for id, weapon in equipment["Weapons"]["data"][slot][category].items() %}
                                 <div class="equipment-slot">
                                     <img src="{{ url_for('static', filename=weapon.get_static_asset_path()) }}" width="135" height="100">
                                 </div>
@@ -79,6 +78,48 @@
                     {% endfor %}
                 </div>
                 {% endfor %}
+            </div>
+
+            <h3>Stratagems</h3>
+            <div class="tab-container">
+                <div class="tab-buttons">
+                    {% for department in equipment["Stratagems"]["class"].valid_departments %}
+                    <button class="btn tab-button stratagem-departments" onclick="tabber_tab_clicked(event, '{{ department }}', 'stratagem-departments')">
+                        {{ department }}
+                    </button>
+                    {% endfor %}
+                </div>
+                
+                {% for department in equipment["Stratagems"]["class"].valid_departments %}
+                <div class="tab-content stratagem-departments" id="{{ department }}">
+                    <div class="equipment-container">
+                        {% for id, stratagem in equipment["Stratagems"]["data"][department].items() %}
+                        <div class="equipment-slot">
+                            <img src="{{ url_for('static', filename=stratagem.get_static_asset_path()) }}" width="100" height="100">
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+
+            <h3>Boosts</h3>
+            <div class="tab-container">
+                <div class="tab-buttons">
+                    <button class="btn tab-button boosts" onclick="tabber_tab_clicked(event, 'boosts', 'boosts')">
+                        Boosts
+                    </button>
+                </div>
+                
+                <div class="tab-content boosts" id="boosts">
+                    <div class="equipment-container">
+                        {% for id, boost in equipment["Boosts"]["data"].items() %}
+                        <div class="equipment-slot">
+                            <img src="{{ url_for('static', filename=boost.get_static_asset_path()) }}" width="100" height="100">
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
             </div>
         </div>
     </div>
