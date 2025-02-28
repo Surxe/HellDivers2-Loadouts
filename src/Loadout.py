@@ -44,8 +44,6 @@ class Loadout():
             self.add_keybind(keybind, amount-1)
 
     def process_keybinds(self):
-        self.add_keybind("Select") #select strata1
-
         # Function to find index of value in 2d array
         def find_index(array, value):
             if value == "None":
@@ -57,27 +55,57 @@ class Loadout():
                         return i, j
             raise Exception(f"Stratagem {stratagem_name} not found in gear options, ensure its spelled correctly.")
         
-        def add_keybinds(num_down, num_right):
+        def add_keybinds(num_down, num_right, move_to_origin=True):
+            # Navigate to it from 0,0
             self.add_keybind("Down", num_down)
             self.add_keybind("Right", num_right)
+
+            # Select it
             self.add_keybind("Select")
 
+            # Navigate back to 0,0
+            if move_to_origin:
+                self.add_keybind("Left", num_right)
+                self.add_keybind("Up", num_down)
+
+        self.add_keybind("Select") #select strata1
+
         # Iterate stratagems
+        i = 0
         for _, stratagem_name in self.loadout_array["Stratagems"].items():
             stratagem_options_array = self.gear_options["Stratagems"]
-            add_keybinds(*find_index(stratagem_options_array, stratagem_name))
+            add_keybinds(*find_index(stratagem_options_array, stratagem_name), i != len(self.loadout_array["Stratagems"])-1)
+            i += 1
 
-        # Iterate weapons
-        for weapon_type, weapon_name in self.loadout_array["Weapons"].items():
-            weapon_options_array = self.gear_options[weapon_type]
-            add_keybinds(*find_index(weapon_options_array, weapon_name))
+        self.add_keybind("Right") # move to boost
+        self.add_keybind("Select") # select boost
 
         # Iterate boosts
+        i = 0
         for _, boost_name in self.loadout_array["Boosts"].items():
             boost_options_array = self.gear_options["Boosts"]
-            add_keybinds(*find_index(boost_options_array, boost_name))
+            add_keybinds(*find_index(boost_options_array, boost_name), i != len(self.loadout_array["Boosts"])-1)
+            i += 1
 
-        self.add_keybind("Select")
+        self.add_keybind("Equipment/Stratagem Swap") # swap to weapons
+        self.add_keybind("Down") # move to primary
+        self.add_keybind("Select") # select primary
+
+        # mouse click the top left corner for the first weapon
+
+        # Iterate weapons
+        i = 0
+        for weapon_type, weapon_name in self.loadout_array["Weapons"].items():
+            weapon_options_array = self.gear_options[weapon_type]
+            is_last_weapon = i == len(self.loadout_array["Weapons"])-1
+            add_keybinds(*find_index(weapon_options_array, weapon_name), not is_last_weapon)
+            self.add_keybind("Exit") # exit current weapon
+            if not is_last_weapon:
+                self.add_keybind("Right") # move to next weapon slot
+                self.add_keybind("Select") # select next weapon
+            i += 1
+
+        #self.add_keybind("Ready") # ready up
 
     def write_cache(self, keybind_config):
         os.makedirs(self.cache_dir, exist_ok=True)

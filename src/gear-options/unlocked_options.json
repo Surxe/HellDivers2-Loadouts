@@ -1,23 +1,38 @@
 {
     "Primary": [
-        ["AR-23 Liberator", "BR-14 Adjudicator"],
+        ["AR-23 Liberator", "AR-23C Liberator Concussive"],
+        ["BR-14 Adjudicator"],
         ["R-2124 Constitution", "R-63 Diligence"],
         ["SMG-37 Defender"],
-        ["SG-8 Punisher"],
+        ["SG-8 Punisher", "SG-225 Breaker"],
+        ["SG-225IE Breaker Incendiary"],
         ["CB-9 Exploding Crossbow", "R-36 Eruptor"]
     ],
     "Secondary": [
         ["P-2 Peacemaker", "P-19 Redeemer"],
-        ["GP-31 Grenade Pistol"]
+        ["P-4 Senator"],
+        ["P-11 Stim Pistol", "GP-31 Grenade Pistol"]
     ],
     "Throwable": [
-        ["G-6 Frag", "G-12 High Explosive"],
+        ["G-6 Frag", "G-12 High Explosive", "G-10 Incendiary"],
         ["G-4 Gas", "G-123 Thermite"]
     ],
     "Stratagems": [
-        ["Eagle 500kg Bomb", "Orbital Gatling Barrage", "Orbital EMS Strike", "Orbital Gas Strike"]
+        ["Eagle 500kg Bomb", "Orbital Gatling Barrage", "Orbital EMS Strike", "Eagle Smoke Strike"],
+        ["Orbital Gas Strike", "Orbital Railcannon Strike", "Orbital Smoke Strike", "Orbital Napalm Barrage"],
+        ["Orbital Laser", "Orbital Precision Strike", "Eagle Napalm Airstrike", "Eagle 110MM Rocket Pods"],
+        ["MLS-4x Commando", "EXO-49 Emancipator Exosuit", "M-105 Stalwart", "AC-8 Autocannon"],
+        ["EXO-45 Patriot Exosuit", "MG-206 Heavy Machine Gun", "SH-32 Shield Generator Pack", "RL-77 Airburst Rocket Launcher"],
+        ["RS-422 Railgun", "TX-41 Sterilizer", "LAS-98 Laser Cannon", "ARC-3 Arc Thrower"],
+        ["FAF-14 Spear", "GL-21 Grenade Launcher", "MG-43 Machine Gun", "SH-20 Ballistic Shield Backpack"],
+        ["StA-X3 W.A.S.P Launcher", "B-1 Supply Pack", "M-102 Fast Recon Vehicle", "FLAM-40 Flamethrower"],
+        ["AX/LAS-5 \"Guard Dog\" Rover", "GR-8 Recoilless Rifle", "LIFT-850 Jump Pack", "APW-1 Anti-Materiel Rifle"],
+        ["AX/TX-13 \"Guard Dog\" Dog Breath", "EAT-17 Expendable Anti-Tank", "LAS-99 Quasar Cannon"],
+        ["MD-17 Anti-Tank Mines", "FX-12 Shield Generator Relay", "A/M-23 EMS Mortar Sentry", "A/MLS-4X Rocket Sentry"],
+        ["A/G-16 Gatling Sentry", "A/ARC-3 Tesla Tower", "A/M-12 Mortar Sentry", "MD-6 Anti-Personnel Minefield"],
+        ["A/MG-43 Machine Gun Sentry", "A/AC-8 Autocannon Sentry", "MD-I4 Incendiary Mines", "E/MG-101 HMG Emplacement"]
     ],
     "Boosts": [
-        ["No Booster", "Hellpod Space Optimization"]
+        ["No Booster", "Vitality Enhancement", "Hellpod Space Optimization", "Expert Extraction Pilot"]
     ]
 }

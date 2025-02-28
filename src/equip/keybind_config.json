@@ -1,7 +1,10 @@
 {
     "Equipment/Stratagem Swap": "r",
     "Select": "Space",
+    "Up": "w",
+    "Left": "a",
     "Down": "s",
     "Right": "d",
-    "Ready": "b"
+    "Ready": "b",
+    "Exit": "Escape"
 }
