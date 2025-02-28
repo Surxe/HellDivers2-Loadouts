@@ -6,17 +6,11 @@ class Loadout():
         self.loadout_path = loadout_path
         self.keybinds = []
         self.gear_options = self.read_gear_options()
-        loadout_name, self.loadout_array = self.read_loadout()
-        self.loadout_name = self.clean_loadout_name(loadout_name)
+        self.loadout_file_name = os.path.basename(loadout_path).split('.')[0] # ../loadouts/loadout1.json -> loadout1
+        self.loadout_name, self.loadout_array = self.read_loadout()
         self.process_keybinds()
         self.cache_dir = "src/equip/cache"
-        self.cache_path = f"{self.cache_dir}/{self.loadout_name}.txt"
-
-    def clean_loadout_name(self, loadout_name):
-        # Remove special characters from loadout name
-        loadout_name = loadout_name.replace(" ", "_")
-        loadout_name = ''.join(e for e in loadout_name if e.isalnum() or e == "_")
-        return loadout_name
+        self.cache_path = f"{self.cache_dir}/{self.loadout_file_name}.txt"
 
     def read_gear_options(self):
         # Read json file with gear options
@@ -54,6 +48,9 @@ class Loadout():
 
         # Function to find index of value in 2d array
         def find_index(array, value):
+            if value == "None":
+                return 0, 0 # None is the default for all equipment, no movement is needed to select it
+
             for i, row in enumerate(array):
                 for j, element in enumerate(row):
                     if element.lower() == value.lower():
@@ -67,7 +64,6 @@ class Loadout():
 
         # Iterate stratagems
         for _, stratagem_name in self.loadout_array["Stratagems"].items():
-            print(stratagem_name)
             stratagem_options_array = self.gear_options["Stratagems"]
             add_keybinds(*find_index(stratagem_options_array, stratagem_name))
 
@@ -86,6 +82,7 @@ class Loadout():
     def write_cache(self, keybind_config):
         os.makedirs(self.cache_dir, exist_ok=True)
         mapped_keybinds = [keybind_config[keybind] for keybind in self.keybinds]
-        mapped_keybinds_str = " ".join(mapped_keybinds)
+        mapped_keybinds_str = "\n".join(mapped_keybinds)
         with open(self.cache_path, "w", encoding='utf-8') as file:
             file.write(mapped_keybinds_str)
+            

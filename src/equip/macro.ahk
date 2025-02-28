@@ -19,16 +19,20 @@ if !FileExist(keybinds_path)
     ExitApp
 }
 
+key_dll_map := Map("Space", 0x20, "s", 0x53, "d", 0x44, "b", 0x42, "r", 0x52)
+
 ; Read the cached keybinds
-keybinds := StrSplit(FileRead(keybinds_path), " ")
+keybinds := StrSplit(FileRead(keybinds_path), "`n", "`r")
 
 CapsLock::
 {
     ; Send each key
     for key in keybinds {
-        if key != "" {
-            Send(key)
-            Sleep(100)
+        if key_dll_map.Has(key) {
+            virtual_keybind := key_dll_map[key]
+            DllCall("keybd_event", "UInt", virtual_keybind, "UInt", 0, "UInt", 0, "UInt", 0) ; Press
+            Sleep(50)
+            DllCall("keybd_event", "UInt", virtual_keybind, "UInt", 0, "UInt", 2, "UInt", 0) ; Release
         }
     }
 }
