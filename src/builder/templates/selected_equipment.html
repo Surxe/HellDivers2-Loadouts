@@ -1,0 +1,31 @@
+<div class="selected-equipment">
+    <h3>Weapons</h3>
+    <div id="weapons" class="equipment-container">
+        {% for slot, weapon_name in loadout["Loadout"]["Weapons"].items() %}
+        <div class="equipment-item">
+            <p>{{ slot }}</p>
+            <div class="equipment-slot weapon-slot" data-tooltip="{{ weapon_name }}"></div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <h3>Stratagems</h3>
+    <div id="stratagems" class="equipment-container">
+        {% for i, stratagem_name in loadout["Loadout"]["Stratagems"].items() %}
+        <div class="equipment-item">
+            <p>{{ i }}</p>
+            <div class="equipment-slot stratagem-slot" data-tooltip="{{ stratagem_name }}"></div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <h3>Boosts</h3>
+    <div id="boosts" class="equipment-container">
+        {% for i, boost_name in loadout["Loadout"]["Boosts"].items() %}
+        <div class="equipment-item">
+            <p>{{ i }}</p>
+            <div class="equipment-slot boost-slot" data-tooltip="{{ boost_name }}"></div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
