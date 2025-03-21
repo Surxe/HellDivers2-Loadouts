@@ -13,7 +13,6 @@
     <div id="stratagems" class="equipment-container">
         {% for i, stratagem_name in loadout["Loadout"]["Stratagems"].items() %}
         <div class="equipment-item">
-            <p>{{ i }}</p>
             <div class="equipment-slot stratagem-slot" data-tooltip="{{ stratagem_name }}"></div>
         </div>
         {% endfor %}
@@ -23,7 +22,6 @@
     <div id="boosts" class="equipment-container">
         {% for i, boost_name in loadout["Loadout"]["Boosts"].items() %}
         <div class="equipment-item">
-            <p>{{ i }}</p>
             <div class="equipment-slot boost-slot" data-tooltip="{{ boost_name }}"></div>
         </div>
         {% endfor %}
