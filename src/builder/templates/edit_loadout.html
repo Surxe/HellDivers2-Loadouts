@@ -106,12 +106,12 @@
             <h3>Boosts</h3>
             <div class="tab-container">
                 <div class="tab-buttons">
-                    <button class="btn tab-button boosts" onclick="tabber_tab_clicked(event, 'boosts', 'boosts')">
+                    <button class="btn tab-button boosts-group" onclick="tabber_tab_clicked(event, 'boosts-tab', 'boosts-group')">
                         Boosts
                     </button>
                 </div>
                 
-                <div class="tab-content boosts" id="boosts">
+                <div class="tab-content boosts-group" id="boosts-tab">
                     <div class="equipment-container">
                         {% for id, boost in equipment["Boosts"]["data"].items() %}
                         <div class="equipment-slot">
