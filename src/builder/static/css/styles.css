@@ -1,8 +1,17 @@
 .equipment-slot {
-    box-shadow: 0 0 0 2px rgb(108, 108, 108);
-    background-color: rgb(46, 46, 46);
-    transition: box-shadow 0.2s ease-in-out;
+    box-shadow: 0 0 0 2px rgb(108, 108, 108); /* Border */
     position: relative;
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+.equipment-slot::before {
+    content: "";
+    position: absolute;
+    inset: 0; /* Fills the entire element */
+    background-color: rgb(46, 46, 46);
+    filter: brightness(var(--brightness, 1)); /* Only affects the background. Default 100% */
+    z-index: -1; /* Keeps it behind the content */
+    border-radius: inherit; /* Matches border radius if any */
 }
 
 .equipment-slot::after { /* When hovered */
