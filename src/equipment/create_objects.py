@@ -133,7 +133,6 @@ if __name__ == "__main__":
         Stratagem("orbital-precision-strike", "Orbital Precision Strike", "Bridge"),
         Stratagem("orbital-gas-strike", "Orbital Gas Strike", "Bridge"),
         Stratagem("orbital-ems-strike", "Orbital EMS Strike", "Bridge"),
-        Stratagem("orbital-ems-strike", "Orbital EMS Strike", "Bridge"),
         Stratagem("orbital-smoke-strike", "Orbital Smoke Strike", "Bridge"),
         Stratagem("emg101-hmg-emplacement", "E/MG-101 HMG Emplacement", "Bridge", "HMG Emplacement"),
         Stratagem("fx12-sheild-generator-relay", "FX-12 Sheild Generator Relay", "Bridge", "Shield Generator Relay"),
