@@ -16,6 +16,8 @@ document.addEventListener("DOMContentLoaded", function () {
             // Reset brightness of all slots
             document.querySelectorAll(".selected-equipment .equipment-slot").forEach(slot => {
                 slot.style.setProperty('--brightness', 1);
+                slot.style.border = '2px solid black';
+                slot.style.setProperty('border-color', 'black');
             });
 
             // Select this slot
@@ -23,6 +25,8 @@ document.addEventListener("DOMContentLoaded", function () {
             selected_loadout_id = this.id;
 
             this.style.setProperty('--brightness', 2); // Change CSS to indicate selection
+            // change border to the color red
+            this.style.setProperty('border-color', 'red');
 
             console.log("Loadout slot clicked:", selected_loadout_id, selected_loadout_type);
         });
@@ -32,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll(".equipment-options .equipment-slot").forEach(slot => {
         slot.addEventListener("click", function () {
             console.log(selected_equipment);
-            let equipment_id = this.id; // Assuming ID is stored in data-tooltip
+            let equipment_id = this.id;
 
             if (equipment_id && !selected_equipment.has(equipment_id)) {
                 selected_equipment.add(equipment_id);
@@ -41,6 +45,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 let target_slot = document.querySelector(`.selected-equipment .equipment-slot[id="${selected_loadout_id}"]`);
 
                 // Edit slot's image's src to slot content
+                target_slot.querySelector("img").src = this.querySelector("img").src;
+                // Set data-tooltip
+                target_slot.querySelector("data-tooltip").textContent = this.querySelector("data-tooltip").textContent;
                 
                 
             }

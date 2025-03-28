@@ -15,7 +15,7 @@
     <div id="stratagems" class="equipment-container">
         {% for i, stratagem_id in loadout["Loadout"]["Stratagems"].items() %}
         <div class="equipment-item">
-            <div id="equipped{{ i }}" class="equipment-slot stratagem-slot" data-tooltip="{{ equipment["Stratagems"]["class"].objs[stratagem_id].name }}" data-type="stratagem">
+            <div id="equipped-{{ i }}" class="equipment-slot stratagem-slot" data-tooltip="{{ equipment["Stratagems"]["class"].objs[stratagem_id].name }}" data-type="stratagem">
                 <img id="equipped-img-{{ i }}" src="{{ url_for('static', filename=equipment["Stratagems"]["class"].objs[stratagem_id].get_static_asset_path()) }}" width="100" height="100">
             </div>
         </div>
