@@ -5,6 +5,14 @@ function edit_loadout(loadout) {
     window.location.href = "/edit_loadout?loadout_id=" + loadout_id;
 }
 
+function deselect_all_slots() {
+    document.querySelectorAll(".selected-equipment .equipment-slot").forEach(slot => {
+        slot.style.setProperty('--brightness', 1);
+        slot.style.border = '2px solid black';
+        slot.style.setProperty('border-color', 'black');
+    });
+}
+
 document.addEventListener("DOMContentLoaded", function () {
     let selected_equipment = new Set(); // Using a Set to avoid duplicates
     let selected_loadout_type = null;
@@ -13,12 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // When a loadout slot is clicked, store the slot (class) and index (id)
     document.querySelectorAll(".selected-equipment .equipment-slot").forEach(slot => {
         slot.addEventListener("click", function () {
-            // Reset brightness of all slots
-            document.querySelectorAll(".selected-equipment .equipment-slot").forEach(slot => {
-                slot.style.setProperty('--brightness', 1);
-                slot.style.border = '2px solid black';
-                slot.style.setProperty('border-color', 'black');
-            });
+            deselect_all_slots(); // Deselect all slots
 
             // Select this slot
             selected_loadout_type = this.getAttribute("data-type");
@@ -44,12 +47,13 @@ document.addEventListener("DOMContentLoaded", function () {
                 // Get current slot to add it to
                 let target_slot = document.querySelector(`.selected-equipment .equipment-slot[id="${selected_loadout_id}"]`);
 
-                // Edit slot's image's src to slot content
+                // Copy div (this)'s data-tooltip to slot's data-tooltip
+                target_slot.setAttribute("data-tooltip", this.getAttribute("data-tooltip"));
+
+                // and img
                 target_slot.querySelector("img").src = this.querySelector("img").src;
-                // Set data-tooltip
-                target_slot.querySelector("data-tooltip").textContent = this.querySelector("data-tooltip").textContent;
                 
-                
+                deselect_all_slots(); // Deselect all slots
             }
         });
     });
