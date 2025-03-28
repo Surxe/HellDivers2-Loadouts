@@ -23,7 +23,7 @@
                 <div class="tab-content weapon-categories" id="{{ category }}">
                     <div class="equipment-container">
                         {% for id, weapon in equipment["Weapons"]["data"][slot][category].items() %}
-                        <div id="{{ weapon.name }}" class="equipment-slot" data-tooltip="{{ weapon.name }}">
+                        <div id="option-{{ weapon.name }}" class="equipment-slot" data-tooltip="{{ weapon.name }}">
                             <img src="{{ url_for('static', filename=weapon.get_static_asset_path()) }}" width="135" height="100">
                         </div>
                         {% endfor %}
@@ -48,7 +48,7 @@
         <div class="tab-content stratagem-departments" id="{{ department }}">
             <div class="equipment-container">
                 {% for id, stratagem in equipment["Stratagems"]["data"][department].items() %}
-                <div id="{{ stratagem.name}} " class="equipment-slot" data-tooltip="{{ stratagem.name }}">
+                <div id="option-{{ stratagem.name}} " class="equipment-slot" data-tooltip="{{ stratagem.name }}">
                     <img src="{{ url_for('static', filename=stratagem.get_static_asset_path()) }}" width="100" height="100">
                 </div>
                 {% endfor %}
@@ -68,7 +68,7 @@
         <div class="tab-content boosts-group" id="boosts-tab">
             <div class="equipment-container">
                 {% for id, boost in equipment["Boosts"]["data"].items() %}
-                <div id="{{ boost.name }}" class="equipment-slot" data-tooltip="{{ boost.name }}">
+                <div id="option-{{ boost.name }}" class="equipment-slot" data-tooltip="{{ boost.name }}">
                     <img src="{{ url_for('static', filename=boost.get_static_asset_path()) }}" width="100" height="100">
                 </div>
                 {% endfor %}
